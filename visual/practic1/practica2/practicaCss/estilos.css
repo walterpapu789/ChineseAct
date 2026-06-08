@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.encabezado {
+    background-color: #211717;
+    color: white;
+    padding: 10px;
+    text-align: center;
+     background: linear-gradient(90deg, #2c3e50, #3498db);
+}
+.navegacion{
+
+    text-align: right;
+    padding: 10px;
+    
+}
+.contenido-principal{
+    width: 80px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}

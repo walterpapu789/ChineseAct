@@ -7,5 +7,9 @@ div{
 }
 
 .degradado-lineal {
-    background: linear-gradient(to right, #ff0000, #0000ff);
+    background: linear-gradient(30deg, #ff0000, #0000ff);
+}
+
+.degradado-radial {
+    background: radial-gradient(circle, #4c00ff, #9aff0d);
 }
