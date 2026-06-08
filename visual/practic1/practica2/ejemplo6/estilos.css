@@ -1,0 +1,11 @@
+div{
+ width: 100px;
+ height: 100px;
+ margin: 10px;
+ text-align: center;
+ color: white;
+}
+
+.degradado-lineal {
+    background: linear-gradient(to right, #ff0000, #0000ff);
+}
