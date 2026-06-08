@@ -1,0 +1,15 @@
+/* selector universal */
+*{
+    border: 1px solid red;
+}
+    
+/* selector de tipo  ID*/
+#titulo-inicio{
+    color:blue;
+}
+
+/* selector de tipo clase:se usa con un punto (.) */
+.parrafo-inicio{
+    font-size: 20px;
+    color: green;
+}

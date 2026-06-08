@@ -1,0 +1,23 @@
+div{
+    padding: 10px;
+    border: 1px solid rgb(0, 255, 51);
+    margin: 20px;
+    background-color: rgb(0, 132, 255);
+
+}
+.caja-nombre{
+    background-color: rgb(255, 0, 0);
+   border: 1px solid rgb(4, 253, 0);
+   margin: 20px;
+
+}
+.caja-hex{
+    background-color: #00ff33;
+   border: 1px solid #00ff33;
+   margin: 20px;
+}
+.parrafo-rbg{
+    background-color: rgb(0, 132, 255);
+    border: 1px solid rgb(0, 132, 255);
+    margin: 20px;
+}
