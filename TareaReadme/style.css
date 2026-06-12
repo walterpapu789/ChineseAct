@@ -1,0 +1,27 @@
+
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif; /* Se añadió el punto y coma faltante */
+}
+
+
+.tarjeta-pokemon {
+    background-color: darkred;
+    color: white;
+    width: 300px;         /* CORRECCIÓN: Se agregó la unidad de medida 'px' */
+    margin: 20px auto;    /* Centra la tarjeta horizontalmente con margen externo */
+    
+    /* Configuración correcta del borde */
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;  /* Se añadió el punto y coma faltante */
+    
+    /* RETO MODELO DE CAJA: Espacio interno para que el texto no choque con los bordes */
+    padding: 20px;        
+}
+
+/* Subclase para los textos específicos */
+.tipo {
+    font-weight: bold;
+    text-align: center;   /* CORRECCIÓN: Se cambió 'centro' por el valor válido 'center' */
+}
