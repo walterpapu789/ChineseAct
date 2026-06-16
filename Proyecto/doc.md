@@ -17,24 +17,6 @@
 ## 🌐 ENLACE AL PROTOTIPO INTERACTIVO (FIGMA)
 * **URL Oficial del Proyecto:** https://www.figma.com/site/o0s9n3KNnhHbAF6uIqKL5I/COMIDARAPIDA.HTML?node-id=0-1&t=Ryq811GofMovXGtM-1
 
----
-
-## 📥 1. REGISTRO DE REQUERIMIENTOS INICIALES Y ALCANCE TÉCNICO
-
-* **Prompt del Usuario:** > Consulta sobre la viabilidad de rediseñar la página principal de un restaurante de comida rápida china, modificando el Index oficial para dotarlo de identidad propia sin recurrir a la duplicación de código, evaluando esquemas de autenticación y navegación.
-* **Análisis de la IA (Explicación):** Se procesaron las pautas del proyecto determinando que el entregable exige estrictamente una Landing Page estática de una sola página continua (*Single Page Application*). Se descartó la creación de múltiples archivos HTML independientes y se sugirió encapsular los flujos de "Iniciar Sesión" y "Registro" mediante componentes estéticos o ventanas modales flotantes para respetar el enfoque arquitectónico evaluado.
-
----
-
-## 📊 2. BENCHMARKING DE COMPETENCIA Y UI DE REFERENCIA
-
-* **Prompt del Usuario:** > Solicitud de análisis comparativo visual entre marcas líderes del sector de comida rápida (China Wok, Pizza Hut, McDonald's, Domino's y Little Caesars) para identificar patrones de diseño amigables (UX/UI) y proponer una interfaz optimizada.
-* **Análisis y Recomendaciones de la IA (Explicación):**
-    * **Optimización de Navegación:** Se detectó que el menú lateral "hamburguesa" de la versión tradicional de China Wok satura las resoluciones de escritorio. Inspirado en Pizza Hut y Little Caesars, se propuso un encabezado horizontal limpio en PC con enlaces directos (Inicio, Menú, Promociones, Contacto), relegando el botón de hamburguesa exclusivamente a resoluciones móviles bajo el estándar *Mobile-First*.
-    * **Arquitectura de Información (Catálogo):** Se corrigió el antipatrón de Domino's, el cual relega sus productos al final del scroll. Se acordó posicionar el catálogo de categorías inmediatamente debajo del Hero Banner.
-    * **Jerarquía del Hero Section:** Inspirado en las estructuras de alta conversión, se planteó un contenedor con bordes redondeados, títulos tipográficos limpios y una imagen recortada con efecto de profundidad visual.
-
----
 
 ## 🎨 3. DEFINICIÓN DE IDENTIDAD VISUAL Y GUÍA DE ESTILOS
 
