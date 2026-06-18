@@ -1,3 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+}
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr; 
+    grid-template-rows: 70px 1fr;   
+    grid-template-areas:
+        "sidebar topbar"
+        "sidebar content";
+    min-height: 100vh; 
+}
+.topbar {
+    grid-area: topbar; 
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.eyebrow {
+    color: #64748b;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.topbar h1 {
+    font-size: 1.5rem;
+    color: #0f172a;
+}
+
+
+.header-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sidebar {
+    grid-area: sidebar; 
+    background-color: #0f172a; 
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 :root {
     --bg-1: #eef5ff;
     --bg-2: #f8fafc;
@@ -8,21 +69,13 @@
     --primary: #2563eb;
     --primary-dark: #0f172a;
     --border: #e2e8f0;
-    --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
 body {
     background:
-        radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 14%),
+        radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 15%),
         linear-gradient(180deg, var(--bg-1), var(--bg-2));
-    min-height: 100vh;
 }
 
 .dashboard-container {
@@ -38,7 +91,6 @@ body {
 
 .sidebar {
     background: linear-gradient(180deg, #0f172a, #111827);
-    color: #fff;
     padding: 32px 18px;
     display: flex;
     flex-direction: column;
@@ -247,6 +299,10 @@ footer {
 }
 
 @media (max-width: 640px) {
+    body {
+        padding: 0;
+    }
+
     .courses-panel,
     .sidebar {
         padding: 18px;
