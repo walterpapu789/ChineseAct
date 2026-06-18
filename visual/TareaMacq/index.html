@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Capacitación</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div>
+                <p class="sidebar-label">Panel</p>
+                <h2>Portal Instructores</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Mis Cursos</a></li>
+                    <li><a href="#">Analíticas</a></li>
+                    <li><a href="#">Certificados</a></li>
+                    <li><a href="#">Configuración</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Sesión activa</p>
+                <span>Profesora Laura</span>
+            </div>
+        </aside>
+
+        <main class="courses-panel">
+            <section class="panel-header">
+                <div>
+                    <p class="eyebrow">Capacitación</p>
+                    <h1>Mis cursos</h1>
+                </div>
+                <button class="header-btn">+ Nuevo curso</button>
+            </section>
+
+            <section class="courses-grid">
+                <article class="course-card course-card--web">
+                    <i class="fi fi-bs-devices"></i>
+                    <div class="course-info">
+                        <h3>Desarrollo Web</h3>
+                        <p>Frontend y diseño moderno</p>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-bar"><span></span></div>
+                        <small>78% completo</small>
+                    </div>
+                    <button>Ingresar</button>
+                </article>
+
+                <article class="course-card course-card--java">
+                    <i class="fi fi-bs-javascript"></i>
+                    <div class="course-info">
+                        <h3>Java</h3>
+                        <p>Programación orientada a objetos</p>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-bar"><span class="span-java"></span></div>
+                        <p>54% completo</p>
+                    </div>
+                    <button>Ingresar</button>
+                </article>
+
+                <article class="course-card course-card--python">
+                    <i class="fi fi-bs-browser"></i>
+                    <div class="course-info">
+                        <h3>Python</h3>
+                        <p>Automatización y análisis</p>
+                    </div>
+                    <div class="progress-wrap">
+                        <div class="progress-bar"><span class="span-python"></span></div>
+                        <small>66% completo</small>
+                    </div>
+                    <button>Ingresar</button>
+                </article>
+            </section>
+        </main>
+    </div>
+    <footer>
+        hola soy fooder
+    </footer>
+</body>
+</html>
