@@ -1,319 +1,158 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
 
 body {
     background-color: #f8fafc;
-}
-.dashboard-layout {
-    display: grid;
-    grid-template-columns: 250px 1fr; 
-    grid-template-rows: 70px 1fr;   
-    grid-template-areas:
-        "sidebar topbar"
-        "sidebar content";
-    min-height: 100vh; 
-}
-.topbar {
-    grid-area: topbar; 
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-}
-
-.eyebrow {
-    color: #64748b;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-}
-
-.topbar h1 {
-    font-size: 1.5rem;
     color: #0f172a;
+    padding: 20px;
 }
-
-
-.header-btn {
-    background-color: #2563eb;
-    color: #ffffff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.sidebar {
-    grid-area: sidebar; 
-    background-color: #0f172a; 
-    color: white;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-:root {
-    --bg-1: #eef5ff;
-    --bg-2: #f8fafc;
-    --surface: #ffffff;
-    --surface-muted: #f8fafc;
-    --text: #0f172a;
-    --muted: #64748b;
-    --primary: #2563eb;
-    --primary-dark: #0f172a;
-    --border: #e2e8f0;
-    --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-
-body {
-    background:
-        radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 15%),
-        linear-gradient(180deg, var(--bg-1), var(--bg-2));
-}
-
 .dashboard-container {
-    width: min(1120px, 100%);
+    max-width: 1200px;
     margin: 0 auto;
-    background: var(--surface);
-    border-radius: 18px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     overflow: hidden;
     display: grid;
     grid-template-columns: 260px 1fr;
-    box-shadow: var(--shadow);
+    min-height: 85vh;
 }
-
 .sidebar {
-    background: linear-gradient(180deg, #0f172a, #111827);
-    padding: 32px 18px;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.sidebar-label {
-    color: #93c5fd;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    justify-content: space-between; 
 }
 
 .sidebar h2 {
-    font-size: 1.35rem;
-    line-height: 1.2;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    margin-bottom: 25px;
 }
 
 .sidebar nav ul {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 .sidebar nav a {
+    display: block;
     color: #cbd5e1;
     text-decoration: none;
-    display: block;
-    padding: 11px 12px;
-    border-radius: 10px;
-    transition: 0.2s ease;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 5px;
 }
 
-.sidebar nav a:hover,
-.sidebar nav a.active {
-    background: #1e293b;
-    color: #fff;
+.sidebar nav a.active, .sidebar nav a:hover {
+    background-color: #1e293b;
+    color: #ffffff;
 }
 
 .sidebar-footer {
-    background: #111827;
+    background-color: #111827;
     padding: 12px;
-    border-radius: 12px;
-}
-
-.sidebar-footer p {
-    color: #94a3b8;
-    font-size: 0.9rem;
-    margin-bottom: 3px;
-}
-
-.sidebar-footer span {
-    font-size: 0.95rem;
-    font-weight: 600;
+    border-radius: 8px;
 }
 
 .courses-panel {
-    background: linear-gradient(180deg, var(--surface-muted), #eef4ff);
-    padding: 32px;
+    background-color: #f1f5f9;
+    padding: 40px;
 }
+
 
 .panel-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 22px;
-}
-
-.eyebrow {
-    color: var(--muted);
-    text-transform: uppercase;
-    font-size: 0.76rem;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-}
-
-.panel-header h1 {
-    color: var(--text);
-    font-size: 1.8rem;
+    justify-content: space-between; 
+    align-items: center;            
+    margin-bottom: 30px;
 }
 
 .header-btn {
-    background: linear-gradient(90deg, var(--primary), #5b8dff);
-    color: #fff;
+    background-color: #2563eb;
+    color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 999px;
-    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
     cursor: pointer;
 }
 
+
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
-
 .course-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 18px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    min-height: 250px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 15px;
 }
 
-.course-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 22px rgba(15, 23, 42, 0.08);
-}
-
+/* Iconos */
 .course-card i {
-    width: 58px;
-    height: 58px;
-    display: grid;
+    font-size: 1.5rem;
+    color: #2563eb;
+    background-color: #dbeafe;
+    width: 50px;
+    height: 50px;
+    display: inline-grid;
     place-items: center;
-    background: #dbeafe;
-    border-radius: 14px;
-    font-size: 1.4rem;
-    color: var(--primary);
+    border-radius: 10px;
 }
 
-.course-info h3 {
-    color: var(--text);
-    font-size: 1rem;
-    margin-bottom: 4px;
-}
-
-.course-info p {
-    color: var(--muted);
-    font-size: 0.9rem;
-}
 
 .progress-wrap {
-    margin-top: auto;
+    margin-top: auto; 
 }
 
 .progress-bar {
-    width: 100%;
+    background-color: #e2e8f0;
     height: 8px;
-    background: #e2e8f0;
-    border-radius: 999px;
+    border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .progress-bar span {
     display: block;
     height: 100%;
-    width: 78%;
-    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    background-color: #2563eb; 
 }
 
-.span-java {
-    width: 54%;
-    background: linear-gradient(90deg, #f59e0b, #fbbf24);
-}
-
-.span-python {
-    width: 66%;
-    background: linear-gradient(90deg, #16a34a, #86efac);
-}
-
-.progress-wrap small,
-.progress-wrap p {
-    color: var(--muted);
-    font-size: 0.85rem;
-}
+.progress-bar .span-java { background-color: #f59e0b; width: 54%; }
+.progress-bar .span-python { background-color: #16a34a; width: 66%; }
 
 .course-card button {
     align-self: flex-start;
-    background: var(--primary-dark);
-    color: #fff;
+    background-color: #0f172a;
+    color: white;
     border: none;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
     cursor: pointer;
-}
-
-.course-card button:hover {
-    background: var(--primary);
 }
 
 footer {
     text-align: center;
-    padding: 16px;
-    color: var(--muted);
-    font-size: 0.9rem;
+    padding: 20px;
+    color: #64748b;
 }
 
-@media (max-width: 920px) {
+/* RESPONSIVE PARA DISPOSITIVOS MÓVILES */
+@media (max-width: 768px) { /* creo que es maximo de px que puede dar al app */
     .dashboard-container {
-        grid-template-columns: 1fr;
-    }
-
-    .courses-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 640px) {
-    body {
-        padding: 0;
-    }
-
-    .courses-panel,
-    .sidebar {
-        padding: 18px;
-    }
-
-    .panel-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .courses-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* bro yo entiendo que esto Pone el sidebar arriba y el contenido abajo */
     }
 }
