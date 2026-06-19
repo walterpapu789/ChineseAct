@@ -6,33 +6,10 @@
     --rojo-hover: #8A0000;         /* Tono oscurecido para estados activos */
     --negro-carbon: #111111;       /* Tono base de alto contraste */
     --gris-borde: rgba(180, 0, 0, 0.15); /* Borde inicial suavizado con matiz de marca */
-    --fuente-global: 'Poppins', 'Arial', sans-serif;
-    
-    /* El secreto de las animaciones fluidas tipo Smart Animate de Figma */
+    --fuente-global: 'Arial', sans-serif;
     --curva-animacion: cubic-bezier(0.25, 0.8, 0.25, 1);
     --transicion-suave: all 0.35s var(--curva-animacion);
 }
-
-/*logo de carrito */
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-
-/*logo de usu */
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
 
 /* ==========================================================================
    2. TRATAMIENTO DEL BODY CON IMAGEN DE FONDO
@@ -47,12 +24,10 @@ body {
     font-family: var(--fuente-global);
     color: var(--negro-carbon);
     line-height: 1.6;
-    
-    /* Configuración para tu imagen física de fondo */
-    background-image: url('img/tu-fondo-texturizado.jpg'); /* Reemplaza con el nombre exacto de tu archivo */
+    background-image: url('img/tu-fondo-texturizado.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Mantiene el fondo estático mientras el contenido se desliza */
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -64,12 +39,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco traslúcido para que respire tu fondo */
+    background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 2px solid var(--gris-borde);
-    backdrop-filter: blur(8px); /* Efecto difuminado premium debajo del menú */
+    backdrop-filter: blur(8px);
 }
 
-/* Animación del Logo al pasar el mouse */
+/* TAMAÑO CONTROLADO: Logo de la Empresa */
 header div:first-child img {
     height: 45px;
     width: auto;
@@ -77,10 +52,9 @@ header div:first-child img {
 }
 
 header div:first-child img:hover {
-    transform: scale(1.05) rotate(-2deg); /* Micro-giro lúdico de marca */
+    transform: scale(1.05) rotate(-2deg);
 }
 
-/* Lista del menú superior */
 nav ul {
     display: flex;
     list-style: none;
@@ -97,12 +71,10 @@ nav ul li a {
     transition: var(--transicion-suave);
 }
 
-/* Transición de color al pasar el mouse (Cambia a rojito) */
 nav ul li a:hover {
     color: var(--rojo-carmesi);
 }
 
-/* Barra inferior expansiva interactiva */
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -115,10 +87,10 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
-    width: 100%; /* Se expande cubriendo todo el ancho del enlace */
+    width: 100%;
 }
 
-/* Bloque derecho: Login y Carrito */
+/* Bloque derecho: Control de Iconos de Usuario y Carrito */
 header div:last-child {
     display: flex;
     align-items: center;
@@ -135,31 +107,31 @@ header div:last-child a {
     transition: var(--transicion-suave);
 }
 
+/* TAMAÑO CONTROLADO: Icono Iniciar Sesión */
 header div:last-child a img {
-    height: 24px;
+    height: 26px;
     width: auto;
     transition: var(--transicion-suave);
 }
 
-/* Animación del bloque Login al hacer hover */
 header div:last-child a:hover {
     color: var(--rojo-carmesi);
 }
 
 header div:last-child a:hover img {
-    transform: translateY(-3px); /* Eleva sutilmente el avatar del usuario */
+    transform: translateY(-3px);
 }
 
-/* Animación interactiva del Carrito */
-header div:last-child div img {
+/* TAMAÑO CONTROLADO: Icono Carrito de Compras */
+header div:last-child > img {
     height: 26px;
     width: auto;
     cursor: pointer;
     transition: var(--transicion-suave);
 }
 
-header div:last-child div img:hover {
-    transform: scale(1.15) rotate(5deg); /* Efecto de rebote comercial */
+header div:last-child > img:hover {
+    transform: scale(1.15) rotate(5deg);
 }
 
 /* ==========================================================================
@@ -181,51 +153,46 @@ header div:last-child div img:hover {
     font-size: 22px;
     color: var(--negro-carbon);
     margin: 30px 0 20px 0;
-    border-left: 4px solid var(--rojo-carmesi); /* Línea de acento izquierda */
+    border-left: 4px solid var(--rojo-carmesi);
     padding-left: 12px;
 }
 
-/* Invocación de la cuadrícula simétrica avanzada */
 #menu div div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
 }
 
-/* Estructura tridimensional de las Tarjetitas */
 article {
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco sutilmente translúcido */
+    background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     padding: 30px 20px;
     text-align: center;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    
-    /* Configuración clave para la transformación física de la tarjeta */
     transition: transform 0.4s var(--curva-animacion), 
                 box-shadow 0.4s var(--curva-animacion), 
                 border-color 0.3s ease;
 }
 
-/* Efecto Hover Avanzado en las tarjetas del catálogo */
 article:hover {
-    transform: translateY(-10px); /* Eleva la tarjeta sobre el lienzo */
-    border-color: var(--rojo-carmesi); /* Ilumina el contorno en color rojo carmesí */
-    box-shadow: 0 16px 30px rgba(180, 0, 0, 0.15); /* Sombra extendida con destello rojizo */
+    transform: translateY(-10px);
+    border-color: var(--rojo-carmesi);
+    box-shadow: 0 16px 30px rgba(180, 0, 0, 0.15);
 }
 
+/* TAMAÑO CONTROLADO: Imágenes de Comidas y Bebidas del Catálogo */
 article img {
-    width: 100%;
-    max-width: 160px;
-    height: auto;
+    width: 120px;   /* Tamaño cuadrado simétrico ideal para las miniaturas */
+    height: 120px;
+    object-fit: cover; /* Evita que la comida se estire o se deforme */
     margin-bottom: 20px;
     transition: var(--transicion-suave);
 }
 
-/* Micro-interacción: La comida se magnifica levemente al enfocar la tarjeta */
 article:hover img {
-    transform: scale(1.06);
+    transform: scale(1.08);
 }
 
 article h4 {
@@ -235,17 +202,16 @@ article h4 {
     transition: var(--transicion-suave);
 }
 
-/* El título interno responde iluminándose en rojo */
 article:hover h4 {
     color: var(--rojo-carmesi);
 }
 
 /* ==========================================================================
-   5. SECCIONES COMPLEMENTARIAS Y FORMULARIO
+   5. SECCIONES SECUNDARIAS Y PIE DE PÁGINA (Footer)
    ========================================================================== */
 #inicio, #sobre-nosotros, #contacto {
     padding: 80px 5%;
-    background-color: rgba(255, 255, 255, 0.85); /* Capa protectora para asegurar legibilidad */
+    background-color: rgba(255, 255, 255, 0.85);
     margin: 40px 5%;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.03);
@@ -264,4 +230,17 @@ article:hover h4 {
 }
 
 #inicio button:hover, #contacto button:hover {
-    background-color:
+    background-color: var(--rojo-hover);
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: var(--negro-carbon);
+    color: #FFFFFF;
+    padding: 50px 5% 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    border-top: 4px solid var(--rojo-carmesi);
+}
