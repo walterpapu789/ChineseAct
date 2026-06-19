@@ -9,12 +9,12 @@
 </head>
 <body>
 
-    <header>
-        <div>
-            <img src="img/logo.png" alt="Logo de Asian Wok">
+    <header class="header-principal">
+        <div class="contenedor-logo">
+            <img src="img/logo (2).png" alt="Logo de Asian Wok" class="logo-marca">
         </div>
 
-        <nav>
+        <nav class="menu-navegacion">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="menu.html">Menú</a></li>
@@ -24,134 +24,86 @@
             </ul>
         </nav>
 
-        <div>
-            <a href="login.html">
-                <img src="img/inicioSesion.png" alt="Icono de usuario">
+        <div class="acciones-usuario">
+            <a href="login.html" class="enlace-login">
+                <img src="img/inicioSesion.png" alt="Icono de usuario" class="icono-usuario">
                 <span>Iniciar sesión</span>
             </a>
-            <img src="img/carritoCompras (2).png" alt="Carrito de compras">
+            <img src="img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito">
         </div>
     </header>
 
     <main>
 
-        <section id="inicio">
-            <div>
+      <section id="inicio" class="seccion-hero">
+            <div class="contenido-hero">
                 <h1>El auténtico sabor del Wok llevado a tu mesa</h1>
                 <p>Descubre nuestros platillos únicos preparados con ingredientes frescos. Combo Red Dragon por $7.95.</p>
-                <button type="button">Explorar Menú</button>
-                <button type="button">Pedidos</button>
+                <div>
+                    <button type="button" class="btn-principal">Explorar Menú</button>
+                    <button type="button" class="btn-secundario">Pedidos</button>
+                </div>
             </div>
-            <div>
-                <img src="img/wok-principal.png" alt="Platillo de Wok humeante en cocina">
+            <div id="imagen-cocina" class="contenedor-hero-img">
+                <img src="img/cocina.png" alt="Platillo de Wok humeante en cocina" class="img-hero-principal">
             </div>
         </section>
-
-        <section id="menu">
+        <section id="menu" class="seccion-catalogo">
             <h2>Categorías de menú</h2>
             
-            <div>
+            <div class="grupo-categoria">
                 <h3>Nuestras Comidas</h3>
-                <div>
-                    <article>
-                        <img src="img/combos.png" alt="Combos personales y familiares">
+                <div class="grid-tarjetas">
+                    <article class="tarjeta-producto">
+                        <img src="img/combos.png" alt="Combos personales y familiares" class="img-tarjeta">
                         <h4>Combos</h4>
                     </article>
 
-                    <article>
-                        <img src="img/arroces.png" alt="Variedad de arroces fritos al wok">
+                    <article class="tarjeta-producto">
+                        <img src="img/arroces.png" alt="Variedad de arroces fritos al wok" class="img-tarjeta">
                         <h4>Arroces</h4>
                     </article>
 
-                    <article>
-                        <img src="img/entradas.png" alt="Entradas crujientes y rollos de primavera">
+                    <article class="tarjeta-producto">
+                        <img src="img/entradas.png" alt="Entradas crujientes y rollos de primavera" class="img-tarjeta">
                         <h4>Entradas</h4>
                     </article>
 
-                    <article>
-                        <img src="img/banquetes.png" alt="Opciones de banquetes para grupos">
+                    <article class="tarjeta-producto">
+                        <img src="img/banquetes.png" alt="Opciones de banquetes para grupos" class="img-tarjeta">
                         <h4>Banquetes</h4>
                     </article>
                 </div>
             </div>
 
-            <div>
+            <div class="grupo-categoria">
                 <h3>Bebidas y Complementos</h3>
-                <div>
-                    <article>
-                        <img src="img/bebidas.png" alt="Bebidas frías y refrescos">
+                <div class="grid-tarjetas">
+                    <article class="tarjeta-producto">
+                        <img src="img/bebidas.png" alt="Bebidas frías y refrescos" class="img-tarjeta">
                         <h4>Bebidas</h4>
                     </article>
 
-                    <article>
-                        <img src="img/promos.png" alt="Cupones y promociones del mes">
+                    <article class="tarjeta-producto">
+                        <img src="img/promos.png" alt="Cupones y promociones del mes" class="img-tarjeta">
                         <h4>Promociones</h4>
                     </article>
                 </div>
             </div>
         </section>
-
-        <section id="sobre-nosotros">
-            <div>
-                <h2>¿Quiénes Somos?</h2>
-                <p>Disfruta de nuestras tradiciones culinarias preparadas al instante con los ingredientes más frescos y la receta de la casa.</p>
-                <img src="img/restaurante.png" alt="Fotografía de las instalaciones de nuestro restaurante">
-            </div>
-
-            <div>
-                <h2>Nuestras Especialidades</h2>
-                <ul>
-                    <li>
-                        <h3>Kung Paon Szechuan</h3>
-                        <p>Arroz frito, lomo o pollo salteado con vegetales crujientes.</p>
-                    </li>
-                    <li>
-                        <h3>Arroces Wok</h3>
-                        <p>Especial de la casa preparado al momento con los mejores cortes.</p>
-                    </li>
-                    <li>
-                        <h3>Entradas Crujientes</h3>
-                        <p>Acompañamientos perfectos para iniciar tu experiencia.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contacto">
-            <h2>Formulario de Contacto</h2>
-            <form action="#" method="POST">
-                <div>
-                    <label for="nombre">Nombre y Apellido</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo">
-                </div>
-
-                <div>
-                    <label for="correo">Correo Electrónico</label>
-                    <input type="email" id="correo" name="correo" placeholder="tu.correo@ejemplo.com">
-                </div>
-
-                <div>
-                    <label for="mensaje">Escribe tu mensaje aquí...</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Déjanos tus comentarios o cotización de banquetes..."></textarea>
-                </div>
-
-                <button type="submit">Enviar Formulario</button>
-            </form>
-        </section>
-
     </main>
 
-    <footer>
-        <div>
+    <footer class="footer-sitio">
+        <div class="columna-footer">
             <h3>Horario de atención</h3>
             <p>Lunes a Jueves: 10:00 a.m. – 9:00 p.m.</p>
             <p>Viernes y Sábado: 10:00 a.m. – 10:00 p.m.</p>
             <p>Domingo: 10:00 a.m. – 8:00 p.m.</p>
         </div>
 
-        <div>
+        <div class="columna-footer">
             <h3>Ubicaciones</h3>
-            <ul>
+            <ul class="lista-ubicaciones">
                 <li>San Salvador</li>
                 <li>Santa Tecla</li>
                 <li>Soyapango</li>
@@ -160,16 +112,16 @@
             </ul>
         </div>
 
-        <div>
+        <div class="columna-footer">
             <h3>Redes Sociales</h3>
-            <ul>
+            <ul class="lista-redes">
                 <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
                 <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
                 <li><a href="https://x.com" target="_blank">Twitter / X</a></li>
             </ul>
         </div>
 
-        <div>
+        <div class="footer-creditos">
             <p>&copy; 2026 Asian Wok. Todos los derechos reservados.</p>
         </div>
     </footer>

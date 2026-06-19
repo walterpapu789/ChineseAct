@@ -1,18 +1,20 @@
 /* ==========================================================================
-   1. VARIABLES DE MARCA Y ANIMACIONES INTERNAS (:root)
+   1. VARIABLES DE MARCA E IDENTIDAD (:root)
    ========================================================================== */
 :root {
-    --rojo-carmesi: #B40000;       /* Rojo institucional de los botones y CTAs */
-    --rojo-hover: #8A0000;         /* Tono oscurecido para estados activos */
-    --negro-carbon: #111111;       /* Tono base de alto contraste */
-    --gris-borde: rgba(180, 0, 0, 0.15); /* Borde inicial suavizado con matiz de marca */
+    --rojo-carmesi: #B40000;       /* Rojo institucional de botones y CTAs */
+    --rojo-hover: #8A0000;         /* Variante oscura para estados activos */
+    --negro-carbon: #111111;       /* Fondo del Footer y contraste */
+    --gris-borde: rgba(180, 0, 0, 0.15); /* Contorno sutil con matiz de marca */
     --fuente-global: 'Arial', sans-serif;
+    
+    /* Curva Bézier idéntica al Smart Animate de Figma */
     --curva-animacion: cubic-bezier(0.25, 0.8, 0.25, 1);
     --transicion-suave: all 0.35s var(--curva-animacion);
 }
 
 /* ==========================================================================
-   2. TRATAMIENTO DEL BODY CON IMAGEN DE FONDO
+   2. RESETEO ESTRUCTURAL Y SOPORTE DE IMAGEN DE FONDO
    ========================================================================== */
 * {
     margin: 0;
@@ -24,44 +26,53 @@ body {
     font-family: var(--fuente-global);
     color: var(--negro-carbon);
     line-height: 1.6;
-    background-image: url('img/tu-fondo-texturizado.jpg');
+    
+    /* Carga de tu imagen local texturizada */
+    background-image: url('img/tu-fondo-texturizado.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
+/* Clases de utilidad dinámicas para alterar color de fuentes */
+.texto-rojo { color: var(--rojo-carmesi) !important; }
+.texto-negro { color: var(--negro-carbon) !important; }
+
 /* ==========================================================================
-   3. CABECERA ANIMADA (Header, Nav & Acciones de Usuario)
+   3. CABECERA NAVEGABLE (Header, Menu & Acciones)
    ========================================================================== */
-header {
+.header-principal {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
     background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 2px solid var(--gris-borde);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px); /* Difuminado premium de fondo */
 }
 
-/* TAMAÑO CONTROLADO: Logo de la Empresa */
-header div:first-child img {
-    height: 45px;
+/* Control estricto del tamaño del Logo */
+.logo-marca {
+    height: 70px;       /* Altura corregida para que luzca imponente */
     width: auto;
+    cursor: pointer;
     transition: var(--transicion-suave);
 }
 
-header div:first-child img:hover {
+.logo-marca:hover {
     transform: scale(1.05) rotate(-2deg);
+    filter: drop-shadow(0 4px 8px rgba(180, 0, 0, 0.2));
 }
 
-nav ul {
+/* Enlaces del menú de navegación */
+.menu-navegacion ul {
     display: flex;
     list-style: none;
     gap: 35px;
 }
 
-nav ul li a {
+.menu-navegacion ul li a {
     text-decoration: none;
     color: var(--negro-carbon);
     font-weight: 500;
@@ -71,11 +82,12 @@ nav ul li a {
     transition: var(--transicion-suave);
 }
 
-nav ul li a:hover {
+.menu-navegacion ul li a:hover {
     color: var(--rojo-carmesi);
 }
 
-nav ul li a::after {
+/* Animación de barra inferior expansiva */
+.menu-navegacion ul li a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -86,18 +98,18 @@ nav ul li a::after {
     transition: var(--transicion-suave);
 }
 
-nav ul li a:hover::after {
+.menu-navegacion ul li a:hover::after {
     width: 100%;
 }
 
-/* Bloque derecho: Control de Iconos de Usuario y Carrito */
-header div:last-child {
+/* Bloque derecho: Login y Carrito local */
+.acciones-usuario {
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
-header div:last-child a {
+.enlace-login {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -107,41 +119,129 @@ header div:last-child a {
     transition: var(--transicion-suave);
 }
 
-/* TAMAÑO CONTROLADO: Icono Iniciar Sesión */
-header div:last-child a img {
+/* Dimensionamiento exacto de iconos locales en Header */
+.icono-usuario, 
+.icono-carrito {
     height: 26px;
     width: auto;
     transition: var(--transicion-suave);
 }
 
-header div:last-child a:hover {
+.icono-carrito {
+    cursor: pointer;
+}
+
+/* Animaciones individuales de enfoque (Hover) */
+.enlace-login:hover {
     color: var(--rojo-carmesi);
 }
 
-header div:last-child a:hover img {
+.enlace-login:hover .icono-usuario {
     transform: translateY(-3px);
 }
 
-/* TAMAÑO CONTROLADO: Icono Carrito de Compras */
-header div:last-child > img {
-    height: 26px;
-    width: auto;
+.icono-carrito:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+/* ==========================================================================
+   4. SECCIONAL HERO / BIENVENIDA (Centrado y Color de Marca)
+   ========================================================================== */
+.seccion-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 10%; /* Incrementado el padding lateral para empujar el contenido al centro */
+    background-color: transparent; 
+    margin: 40px auto; /* Añadido más margen superior e inferior para equilibrar */
+    max-width: 1400px;
+}
+
+.contenido-hero {
+    flex: 1;
+    max-width: 600px;
+    text-align: center; /* Centra los textos y los botones de forma simétrica */
+}
+
+.contenido-hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--rojo-carmesi); /* CAMBIADO: Ahora el título principal es de tu color rojo institucional */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contenido-hero p {
+    font-size: 18px;
+    color: #444444;
+    margin-bottom: 30px;
+}
+
+/* Control de Botonera del Banner (Centrados en su contenedor flex) */
+.btn-principal, 
+.btn-secundario {
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
+    display: inline-block; /* Asegura el correcto comportamiento del centrado */
     transition: var(--transicion-suave);
 }
 
-header div:last-child > img:hover {
-    transform: scale(1.15) rotate(5deg);
+.btn-principal {
+    background-color: var(--rojo-carmesi);
+    color: #FFFFFF;
+    border: none;
+    margin: 0 10px 10px 10px; /* Margen equilibrado para centrado */
 }
 
+.btn-principal:hover {
+    background-color: var(--rojo-hover);
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--negro-carbon);
+    border: 2px solid var(--negro-carbon);
+    margin: 0 10px 10px 10px; /* Margen equilibrado para centrado */
+}
+
+.btn-secundario:hover {
+    background-color: var(--negro-carbon);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+/* Contenedor e Imagen de la Derecha (Plato Cocina) */
+.contenedor-hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-hero-principal {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+    transition: var(--transicion-suave);
+}
+
+.img-hero-principal:hover {
+    transform: translateY(-5px) scale(1.02);
+}
 /* ==========================================================================
-   4. CUADRÍCULA DE TARJETAS COMERCIALES (Grid Layout & Hover)
+   5. CUADRÍCULA DEL CATÁLOGO COMERCIAL (Grid System NATIVO)
    ========================================================================== */
-#menu {
+.seccion-catalogo {
     padding: 60px 5%;
 }
 
-#menu h2 {
+.seccion-catalogo h2 {
     font-size: 32px;
     font-weight: 700;
     color: var(--negro-carbon);
@@ -149,21 +249,38 @@ header div:last-child > img:hover {
     text-align: center;
 }
 
-#menu h3 {
-    font-size: 22px;
-    color: var(--negro-carbon);
-    margin: 30px 0 20px 0;
-    border-left: 4px solid var(--rojo-carmesi);
-    padding-left: 12px;
+/* Títulos de Categoría Rojos y Centrados tipo Figma */
+.grupo-categoria h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--rojo-carmesi); 
+    text-align: center;         
+    margin: 45px 0 25px 0;      
+    padding-bottom: 8px;
+    position: relative;
 }
 
-#menu div div {
+.grupo-categoria h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--rojo-carmesi);
+    border-radius: 2px;
+}
+
+/* Rejilla de columnas dinámicas para ordenar las tarjetas una al lado de la otra */
+.grid-tarjetas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
 }
 
-article {
+/* Estilo premium con relieve 3D para cada Tarjetita blanca */
+.tarjeta-producto {
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
@@ -176,71 +293,93 @@ article {
                 border-color 0.3s ease;
 }
 
-article:hover {
-    transform: translateY(-10px);
-    border-color: var(--rojo-carmesi);
-    box-shadow: 0 16px 30px rgba(180, 0, 0, 0.15);
+.tarjeta-producto:hover {
+    transform: translateY(-10px); /* La tarjeta flota hacia arriba */
+    border-color: var(--rojo-carmesi); /* El borde se ilumina en rojo carmesí */
+    box-shadow: 0 16px 30px rgba(180, 0, 0, 0.15); /* Brillo difuminado sutil */
 }
 
-/* TAMAÑO CONTROLADO: Imágenes de Comidas y Bebidas del Catálogo */
-article img {
-    width: 120px;   /* Tamaño cuadrado simétrico ideal para las miniaturas */
+/* Control simétrico de las fotos de comida */
+.img-tarjeta {
+    width: 120px;   
     height: 120px;
-    object-fit: cover; /* Evita que la comida se estire o se deforme */
+    object-fit: cover; 
     margin-bottom: 20px;
     transition: var(--transicion-suave);
 }
 
-article:hover img {
-    transform: scale(1.08);
+.tarjeta-producto:hover .img-tarjeta {
+    transform: scale(1.08); /* La comida se expande levemente al enfocarla */
 }
 
-article h4 {
+.tarjeta-producto h4 {
     font-size: 18px;
     font-weight: 600;
     color: var(--negro-carbon);
     transition: var(--transicion-suave);
 }
 
-article:hover h4 {
-    color: var(--rojo-carmesi);
+.tarjeta-producto:hover h4 {
+    color: var(--rojo-carmesi); /* El nombre del plato se ilumina en rojo */
 }
 
 /* ==========================================================================
-   5. SECCIONES SECUNDARIAS Y PIE DE PÁGINA (Footer)
+   6. PIE DE PÁGINA COMERCIAL COMPLETO (Footer Largo)
    ========================================================================== */
-#inicio, #sobre-nosotros, #contacto {
-    padding: 80px 5%;
-    background-color: rgba(255, 255, 255, 0.85);
-    margin: 40px 5%;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
-}
-
-#inicio button, #contacto button {
-    background-color: var(--rojo-carmesi);
-    color: #FFFFFF;
-    border: none;
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transicion-suave);
-}
-
-#inicio button:hover, #contacto button:hover {
-    background-color: var(--rojo-hover);
-    transform: translateY(-2px);
-}
-
-footer {
+.footer-sitio {
     background-color: var(--negro-carbon);
     color: #FFFFFF;
-    padding: 50px 5% 20px 5%;
+    padding: 60px 5% 30px 5%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
     border-top: 4px solid var(--rojo-carmesi);
+}
+
+.columna-footer {
+    flex: 1;
+    min-width: 220px;
+}
+
+.columna-footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.columna-footer p, 
+.columna-footer ul li {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8); 
+    margin-bottom: 12px;
+}
+
+.columna-footer ul {
+    list-style: none;
+}
+
+.columna-footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transicion-suave);
+}
+
+.columna-footer a:hover {
+    color: var(--rojo-carmesi);
+    padding-left: 4px; 
+}
+
+.footer-creditos {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.footer-creditos p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
 }
