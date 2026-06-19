@@ -8,8 +8,7 @@
     --gris-borde: rgba(180, 0, 0, 0.15); /* Contorno sutil con matiz de marca */
     --fuente-global: 'Arial', sans-serif;
     
-    /* Curva Bézier idéntica al Smart Animate de Figma */
-    --curva-animacion: cubic-bezier(0.25, 0.8, 0.25, 1);
+  
     --transicion-suave: all 0.35s var(--curva-animacion);
 }
 
@@ -28,7 +27,7 @@ body {
     line-height: 1.6;
     
     /* Carga de tu imagen local texturizada */
-    background-image: url('img/tu-fondo-texturizado.png');
+    background-image: url('img/tu-fondo-texturizado1.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -144,16 +143,16 @@ body {
     transform: scale(1.15) rotate(5deg);
 }
 /* ==========================================================================
-   4. SECCIONAL HERO / BIENVENIDA (Centrado y Color de Marca)
+   4. SECCIONAL HERO / BIENVENIDA 
    ========================================================================== */
 .seccion-hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    padding: 60px 10%; /* Incrementado el padding lateral para empujar el contenido al centro */
+    padding: 40px 10% 10px 10%; /* REDUCIDO: Bajamos el padding de abajo a 10px */
     background-color: transparent; 
-    margin: 40px auto; /* Añadido más margen superior e inferior para equilibrar */
+    margin: 20px auto 0 auto;    /* REDUCIDO: El margen inferior ahora es 0 */
     max-width: 1400px;
 }
 
@@ -165,7 +164,7 @@ body {
 
 .contenido-hero h1 {
     font-size: 42px;
-    font-weight: 700;
+    font-weight: 800px;
     color: var(--rojo-carmesi); /* CAMBIADO: Ahora el título principal es de tu color rojo institucional */
     line-height: 1.2;
     margin-bottom: 20px;
@@ -177,7 +176,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Control de Botonera del Banner (Centrados en su contenedor flex) */
+
 .btn-principal, 
 .btn-secundario {
     padding: 14px 32px;
