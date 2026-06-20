@@ -7,8 +7,7 @@
     --negro-carbon: #111111;       /* Fondo del Footer y contraste */
     --gris-borde: rgba(180, 0, 0, 0.15); /* Contorno sutil con matiz de marca */
     --fuente-global: 'Arial', sans-serif;
-    
-  
+    --curva-animacion: cubic-bezier(0.2, 0.8, 0.2, 1);
     --transicion-suave: all 0.35s var(--curva-animacion);
 }
 
@@ -246,6 +245,9 @@ body {
     color: var(--negro-carbon);
     margin-bottom: 40px;
     text-align: center;
+    .seccion-catalogo {
+    padding: 15px 5% 90px 5%; /* Subimos de 60px a 90px abajo para dar más aire visual */
+}
 }
 
 /* Títulos de Categoría Rojos y Centrados tipo Figma */
@@ -276,39 +278,49 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
+    align-items: stretch; /* asegurar que las tarjetas llenen la celda */
+    align-content: start;
 }
 
 /* Estilo premium con relieve 3D para cada Tarjetita blanca */
 .tarjeta-producto {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
-    padding: 30px 20px;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-    transition: transform 0.4s var(--curva-animacion), 
-                box-shadow 0.4s var(--curva-animacion), 
-                border-color 0.3s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+    transition: transform 0.35s var(--curva-animacion),
+                box-shadow 0.35s var(--curva-animacion),
+                border-color 0.28s ease;
+    min-height: 340px; /* Altura fija para que todas las tarjetas queden iguales */
+    width: 100%; /* ocupar todo el espacio de la celda */
 }
 
 .tarjeta-producto:hover {
-    transform: translateY(-10px); /* La tarjeta flota hacia arriba */
-    border-color: var(--rojo-carmesi); /* El borde se ilumina en rojo carmesí */
-    box-shadow: 0 16px 30px rgba(180, 0, 0, 0.15); /* Brillo difuminado sutil */
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--rojo-carmesi);
+    box-shadow: 0 18px 40px rgba(180, 0, 0, 0.14);
 }
 
 /* Control simétrico de las fotos de comida */
 .img-tarjeta {
-    width: 120px;   
-    height: 120px;
-    object-fit: cover; 
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
     margin-bottom: 20px;
-    transition: var(--transicion-suave);
+    transition: transform 0.35s var(--curva-animacion), box-shadow 0.35s var(--curva-animacion);
 }
 
 .tarjeta-producto:hover .img-tarjeta {
-    transform: scale(1.08); /* La comida se expande levemente al enfocarla */
+    transform: scale(1.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .tarjeta-producto h4 {
@@ -316,6 +328,7 @@ body {
     font-weight: 600;
     color: var(--negro-carbon);
     transition: var(--transicion-suave);
+    margin-top: 12px;
 }
 
 .tarjeta-producto:hover h4 {
