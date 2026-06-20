@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="web de comida rapida de la empresa de asian wok">
+    <title>Registro - Asian Wok</title>
+    <link rel="stylesheet" href="css/styleLogin.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="contenedor-logo">
+            <img src="img/logo (2).png" alt="Logo de Asian Wok" class="logo-marca">
+        </div>
+
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-usuario">
+            <a href="login.html" class="enlace-login">
+                <img src="img/inicioSesion.png" alt="Icono de usuario" class="icono-usuario">
+                <span>Iniciar sesión</span>
+            </a>
+            <img src="img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito">
+        </div>
+    </header>
+
+    <main class="contenedor-formulario">
+        <section class="caja-formulario">
+            <h2>Crear una Cuenta</h2>
+            <p>Regístrate para guardar tus direcciones y acumular promociones.</p>
+
+            <form action="login.html" method="get">
+                <div>
+                    <label for="nombre-registro">Nombre Completo:</label>
+                    <input type="text" id="nombre-registro" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+
+                <div>
+                    <label for="correo-registro">Correo Electrónico:</label>
+                    <input type="email" id="correo-registro" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div>
+                    <label for="password-registro">Contraseña:</label>
+                    <input type="password" id="password-registro" name="password" placeholder="Mínimo 8 caracteres" required>
+                </div>
+
+                <div>
+                    <label for="confirm-password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Repite tu contraseña" required>
+                </div>
+
+                <div>
+                    <button type="submit">Registrarme</button>
+                </div>
+            </form>
+
+            <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+            <p><a href="index.html">Volver al inicio</a></p>
+        </section>
+    </main>
+
+</body>
+</html>

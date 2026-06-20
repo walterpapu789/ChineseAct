@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Asian Wok</title>
+    <meta name="description" content="web de comida rapida de la empresa de asian wok">
+    <link rel="stylesheet" href="css/styleLogin.css">
+</head>
+<body>
+        <header class="header-principal">
+        <div class="contenedor-logo">
+            <img src="img/logo (2).png" alt="Logo de Asian Wok" class="logo-marca">
+        </div>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="contenedor-formulario">
+        <section class="caja-formulario">
+            <h2>Iniciar Sesión</h2>
+            <p>Accede a tu cuenta para realizar tus pedidos rápidos.</p>
+
+            <form id="form-login" action="index-logged.html" method="get">
+                <div>
+                    <label for="correo-login">Correo Electrónico:</label>
+                    <input type="email" id="correo-login" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div>
+                    <label for="password-login">Contraseña:</label>
+                    <input type="password" id="password-login" name="password" placeholder="Tu contraseña" required>
+                </div>
+
+                <div>
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+            <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            <p><a href="index.html">Volver al inicio</a></p>
+        </section>
+    </main>
+</body>
+</html>
