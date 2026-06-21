@@ -429,7 +429,7 @@ a:hover {
 }
 
 
-/*sobre nosotros */
+/*sobre nosotros pa no perderme */
     .seccion-nosotros {
             max-width: 1000px;
             margin: 40px auto;
@@ -491,7 +491,7 @@ a:hover {
         }
 
 
-        /*Oferta dragon*/
+        /*Oferta dragon pa no perderme*/
             .oferta-destacada {
             background: linear-gradient(135deg, var(--rojo-carmesi) 0%, #8A0000 100%);
             color: white;
@@ -516,3 +516,558 @@ a:hover {
 
 /* Ofertas Dragon */
 .oferta-destacada { background: linear-gradient(135deg, var(--rojo-carmesi) 0%, #8A0000 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 30px 0; }
+
+/*codigo de menu pa no perderme*/
+       .menu-contenedor {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 20px 5%;
+        }
+
+        .menu-titulo {
+            text-align: center;
+            font-size: 40px;
+            color: var(--rojo-carmesi);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .menu-subtitulo {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .menu-categoria {
+            margin-bottom: 60px;
+        }
+
+        .categoria-titulo {
+            font-size: 28px;
+            color: var(--rojo-carmesi);
+            border-bottom: 3px solid var(--rojo-carmesi);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .categoria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: var(--transicion-suave);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(180, 0, 0, 0.15);
+        }
+
+        .menu-item-imagen {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #999;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-item-contenido {
+            padding: 20px;
+        }
+
+        .menu-item-nombre {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--negro-carbon);
+            margin-bottom: 8px;
+        }
+
+        .menu-item-descripcion {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .menu-item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-item-precio {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--rojo-carmesi);
+        }
+
+        .btn-agregar {
+            background-color: var(--rojo-carmesi);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: var(--transicion-suave);
+        }
+
+        .btn-agregar:hover {
+            background-color: var(--rojo-hover);
+            transform: scale(1.05);
+        }
+
+        .badge-especial {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--rojo-carmesi);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .filtro-categorias {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-filtro {
+            padding: 10px 20px;
+            border: 2px solid var(--gris-borde);
+            background: white;
+            color: var(--negro-carbon);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transicion-suave);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .btn-filtro:hover,
+        .btn-filtro.activo {
+            background-color: var(--rojo-carmesi);
+            color: white;
+            border-color: var(--rojo-carmesi);
+        }
+
+        @media (max-width: 768px) {
+            .menu-titulo {
+                font-size: 28px;
+            }
+
+            .categoria-titulo {
+                font-size: 22px;
+            }
+
+            .categoria-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filtro-categorias {
+                justify-content: flex-start;
+            }
+        }
+
+
+        /* contacto bro pa no peldelme*/
+        
+
+.contacto-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .contacto-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .contacto-info h3 {
+            color: var(--rojo-carmesi);
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .contacto-info p {
+            margin: 15px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+        .contacto-info a {
+            color: var(--rojo-carmesi);
+            text-decoration: none;
+        }
+        .contacto-info a:hover {
+            text-decoration: underline;
+        }
+        .formulario-contacto {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--negro-carbon);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--rojo-carmesi);
+            box-shadow: 0 0 0 3px rgba(180, 0, 0, 0.1);
+        }
+        .btn-enviar {
+            background-color: var(--rojo-carmesi);
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1em;
+        }
+        .btn-enviar:hover {
+            background-color: var(--rojo-hover);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+/*carrito pa no peldelme*/
+
+/* ==========================================================================
+   1. VARIABLES DE MARCA E IDENTIDAD (Indispensables para que no colapse)
+   ========================================================================== */
+:root {
+    --rojo-carmesi: #B40000;       /* Rojo institucional de botones y CTAs */
+    --rojo-hover: #8A0000;         /* Variante oscura para estados activos */
+    --negro-carbon: #111111;       /* Contraste principal */
+    --gris-borde: rgba(180, 0, 0, 0.15); /* Contorno sutil con matiz de marca */
+    --gris-suave: #F5F5F5;         /* Fondo para los campos de texto internos */
+    --fuente-global: 'Arial', sans-serif;
+    --curva-animacion: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --transicion-suave: all 0.35s var(--curva-animacion);
+}
+
+/* ==========================================================================
+   2. RESETEO E STRUCTURAL Y SOPORTE GENERAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-global);
+    color: var(--negro-carbon);
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   3. CUADRÍCULA PRINCIPAL DEL CARRITO (Garantiza el orden de las columnas)
+   ========================================================================== */
+.carrito-contenedor {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    flex: 1;
+    width: 100%;
+}
+
+.carrito-titulo {
+    text-align: center;
+    font-size: 36px;
+    color: var(--rojo-carmesi);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.carrito-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+/* Contenedor de la lista de productos */
+.items-carrito {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Cada fila de producto individual */
+.item-carrito {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(180, 0, 0, 0.1);
+}
+
+.item-carrito:first-child {
+    padding-top: 0;
+}
+
+.item-carrito:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.item-imagen {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.item-detalles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-nombre {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--negro-carbon);
+}
+
+/* Controladores de cantidad (Botones +/-) */
+.item-cantidad {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-cantidad {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--gris-borde);
+    background: white;
+    color: var(--negro-carbon);
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicion-suave);
+}
+
+.btn-cantidad:hover {
+    background-color: var(--rojo-carmesi);
+    color: white;
+    border-color: var(--rojo-carmesi);
+}
+
+.cantidad-valor {
+    width: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.item-subtotal {
+    text-align: right;
+    font-weight: 700;
+    color: var(--rojo-carmesi);
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   4. CAJA DEL RESUMEN Y TOTAL DE PAGO
+   ========================================================================== */
+.carrito-resumen {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.resumen-titulo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--negro-carbon);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.resumen-fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.resumen-label {
+    color: #555;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.resumen-valor {
+    font-weight: 600;
+    color: var(--negro-carbon);
+}
+
+.resumen-total {
+    background-color: rgba(180, 0, 0, 0.06);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+    border: 1px dashed rgba(180, 0, 0, 0.2);
+}
+
+.resumen-total-valor {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--rojo-carmesi);
+}
+
+/* Botones de acción del resumen */
+.btn-checkout {
+    width: 100%;
+    background-color: var(--rojo-carmesi);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transicion-suave);
+    box-shadow: 0 4px 12px rgba(180, 0, 0, 0.2);
+}
+
+.btn-checkout:hover {
+    background-color: var(--rojo-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(180, 0, 0, 0.35);
+}
+
+.btn-continuar {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--rojo-carmesi);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transicion-suave);
+}
+
+.btn-continuar:hover {
+    color: var(--rojo-hover);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   5. DISEÑO RESPONSIVO (Soporte Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .carrito-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carrito-resumen {
+        position: static;
+    }
+
+    .item-carrito {
+        grid-template-columns: 80px 1fr;
+        gap: 15px;
+    }
+    
+    .item-subtotal {
+        grid-column: 1 / -1;
+        text-align: right;
+        padding-top: 5px;
+    }
+
+    .item-imagen {
+        width: 80px;
+        height: 80px;
+    }
+}
