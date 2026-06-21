@@ -6,7 +6,6 @@
     <title>Asian Wok - El auténtico sabor del Wok</title>
     <meta name="description" content="web de comida rapida de la empresa de asian wok">
     <link rel="stylesheet" href="css/style.css">
-      <script src="../Proyecto/js/auth.js"></script>
 </head>
 <body>
 
@@ -17,7 +16,7 @@
 
         <nav class="menu-navegacion">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Inicio</a></li>
                 <li><a href="menu.html">Menú</a></li>
                 <li><a href="promociones.html">Promociones</a></li>
                 <li><a href="nosotros.html">Sobre Nosotros</a></li>
@@ -27,12 +26,12 @@
 
         <div class="acciones-usuario">
             <div id="contenedor-autenticacion" style="display: inline-block;">
-                <a href="login.html" class="enlace-login">
-                    <img src="img/inicioSesion.png" alt="Icono de usuario" class="icono-usuario">
+                <a href="perfil.html" class="enlace-login">
+                    <img src="img/perfil.png" alt="Icono de usuario" class="icono-usuario">
                     <span>Walterpapu</span>
                 </a>
             </div>
-            <img src="img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito">
+            <a href="carrito.html"><img src="img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito"></a>
         </div>
     </header>
 
@@ -50,56 +49,76 @@
                 <img src="img/cocina.png" alt="Platillo de Wok humeante en cocina" class="img-hero-principal">
             </div>
         </section>
-        <section id="menu" class="seccion-catalogo">
+     <section id="menu" class="seccion-catalogo">
             <h2>Categorías de menú</h2>
             
             <div class="grupo-categoria">
                 <h3>Nuestras Comidas</h3>
                 <div class="grid-tarjetas">
+                    
                     <article class="tarjeta-producto">
-                        <img src="img/combos.png" alt="Combos personales y familiares" class="img-tarjeta">
-                        <h4>Combos</h4>
+                        <a href="combos.html" class="enlace-tarjeta">
+                            <img src="img/combos.png" alt="Combos personales y familiares" class="img-tarjeta">
+                            <h4>Combos</h4>
+                        </a>
                     </article>
 
                     <article class="tarjeta-producto">
-                        <img src="img/arroz.png" alt="Variedad de arroces fritos al wok" class="img-tarjeta">
-                        <h4>Arroces</h4>
+                        <a href="arroces.html" class="enlace-tarjeta">
+                            <img src="img/arroz.png" alt="Variedad de arroces fritos al wok" class="img-tarjeta">
+                            <h4>Arroces</h4>
+                        </a>
                     </article>
 
                     <article class="tarjeta-producto">
-                        <img src="img/entradas.png" alt="Entradas crujientes y rollos de primavera" class="img-tarjeta">
-                        <h4>Entradas</h4>
+                        <a href="entradas.html" class="enlace-tarjeta">
+                            <img src="img/entradas.png" alt="Entradas crujientes y rollos de primavera" class="img-tarjeta">
+                            <h4>Entradas</h4>
+                        </a>
                     </article>
 
                     <article class="tarjeta-producto">
-                        <img src="img/banquete.png" alt="Opciones de banquetes para grupos" class="img-tarjeta">
-                        <h4>Banquetes</h4>
+                        <a href="banquetes.html" class="enlace-tarjeta">
+                            <img src="img/banquete.png" alt="Opciones de banquetes para grupos" class="img-tarjeta">
+                            <h4>Banquetes</h4>
+                        </a>
                     </article>
+
                 </div>
             </div>
 
             <div class="grupo-categoria">
                 <h3>Bebidas y Complementos</h3>
                 <div class="grid-tarjetas">
-                    <article class="tarjeta-producto">
-                        <img src="img/bebdias.png" alt="Bebidas frías y refrescos" class="img-tarjeta">
-                        <h4>Bebidas</h4>
-                    </article>
-
-                    <article class="tarjeta-producto">
-                        <img src="img/promociones.png" alt="Cupones y promociones del mes" class="img-tarjeta">
-                        <h4>Promociones</h4>
-                     </article>
                     
                     <article class="tarjeta-producto">
-                        <img src="img/postre.png" alt="Postres" class="img-tarjeta">
-                        <h4>Postres</h4>
+                        <a href="bebidas.html" class="enlace-tarjeta">
+                            <img src="img/bebdias.png" alt="Bebidas frías y refrescos" class="img-tarjeta">
+                            <h4>Bebidas</h4>
+                        </a>
                     </article>
 
                     <article class="tarjeta-producto">
-                        <img src="img/dragon.png" alt="Ofertas Dragón especiales" class="img-tarjeta">
-                        <h4>Ofertas Dragón</h4>
+                        <a href="promociones.html" class="enlace-tarjeta">
+                            <img src="img/promociones.png" alt="Cupones y promociones del mes" class="img-tarjeta">
+                            <h4>Promociones</h4>
+                        </a>
                     </article>
+                    
+                    <article class="tarjeta-producto">
+                        <a href="postres.html" class="enlace-tarjeta">
+                            <img src="img/postre.png" alt="Postres" class="img-tarjeta">
+                            <h4>Postres</h4>
+                        </a>
+                    </article>
+
+                    <article class="tarjeta-producto">
+                        <a href="ofertas-dragon.html" class="enlace-tarjeta">
+                            <img src="img/dragon.png" alt="Ofertas Dragón especiales" class="img-tarjeta">
+                            <h4>Ofertas Dragón</h4>
+                        </a>
+                    </article>
+
                 </div>
             </div>
         </section>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perfil de usuario de la empresa Asian Wok">
+    <title>Mi Perfil - Asian Wok</title>
+    <link rel="stylesheet" href="../Proyecto/css/perfil.css">
+</head>
+<body>
+
+    <header class="header-principal">
+        <div class="contenedor-logo">
+            <img src="img/logo (2).png" alt="Logo de Asian Wok" class="logo-marca">
+        </div>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index-logged.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-usuario">
+            <a href="perfil.html" class="enlace-login">
+                <img src="img/perfil.png" alt="Icono de usuario" class="icono-usuario">
+                <span class="texto-rojo">¡Hola, Walter!</span>
+            </a>
+            <img src="img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito">
+        </div>
+    </header>
+
+    <main class="contenedor-formulario">
+        <section class="seccion-perfil">
+            <div class="perfil-intro">
+                <h2>Mi Perfil</h2>
+                <p>Gestiona tus datos, revisa tu racha de pedidos y vuelve rápidamente a la tienda.</p>
+            </div>
+
+            <div class="perfil-panel">
+                <div class="avatar-usuario">
+                    <img src="img/perfil.png" alt="Avatar de usuario">
+                    <div class="avatar-acciones">
+                        <button type="button" class="btn-editar-avatar">Editar imagen</button>
+                    </div>
+                    <h3>Walter López</h3>
+                    <span class="badge-vip">Cliente Dragón VIP</span>
+                </div>
+
+                <div class="perfil-resumen">
+                    <div class="resumen-card">
+                        <p class="resumen-title">Racha de compras</p>
+                        <strong>5 pedidos seguidos</strong>
+                    </div>
+                    <div class="resumen-card">
+                        <p class="resumen-title">Pedidos completados</p>
+                        <strong>12 órdenes</strong>
+                    </div>
+                    <div class="resumen-card">
+                        <p class="resumen-title">Estado de cuenta</p>
+                        <strong>Membresía Oro Asiático</strong>
+                    </div>
+                    <div class="resumen-card">
+                        <p class="resumen-title">Puntos</p>
+                        <strong>+320 puntos</strong>
+                    </div>
+                </div>
+            </div>
+
+            <form class="perfil-datos" action="">
+                <div class="campo-datos">
+                    <label for="perf-nombre">Nombre completo</label>
+                    <input type="text" id="perf-nombre" value="Walter López">
+                </div>
+                <div class="campo-datos">
+                    <label for="perf-correo">Correo Electrónico</label>
+                    <input type="email" id="perf-correo" value="walter.lopez@asianwok.com">
+                </div>
+                <div class="campo-datos">
+                    <label for="perf-telefono">Teléfono</label>
+                    <input type="tel" id="perf-telefono" value="+503 7888 1122">
+                </div>
+                <div class="campo-datos">
+                    <label for="perf-direc">Dirección de entrega</label>
+                    <input type="text" id="perf-direc" value="Residencial San Salvador, Calle Poniente #12">
+                </div>
+
+                <div class="botones-accion">
+                    <button type="button" class="btn-guardar">Guardar cambios</button>
+                    <a href="index.html" class="btn-salir">Cerrar sesión</a>
+                </div>
+            </form>
+
+            <a href="index-logged.html" class="enlace-volver">← Volver a la tienda</a>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Asian Wok</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contacto-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .contacto-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .contacto-info h3 {
+            color: var(--rojo-carmesi);
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .contacto-info p {
+            margin: 15px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+        .contacto-info a {
+            color: var(--rojo-carmesi);
+            text-decoration: none;
+        }
+        .contacto-info a:hover {
+            text-decoration: underline;
+        }
+        .formulario-contacto {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--negro-carbon);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--rojo-carmesi);
+            box-shadow: 0 0 0 3px rgba(180, 0, 0, 0.1);
+        }
+        .btn-enviar {
+            background-color: var(--rojo-carmesi);
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1em;
+        }
+        .btn-enviar:hover {
+            background-color: var(--rojo-hover);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-principal">
+        <div class="contenedor-logo">
+            <img src="img/logo (2).png" alt="Logo de Asian Wok" class="logo-marca">
+        </div>
+        <nav class="menu-navegacion">
+            <ul>
+                <li><a href="index-logged.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-usuario">
+            <a href="perfil.html" class="enlace-login">
+                <img src="img/perfil.png" alt="Icono de usuario" class="icono-usuario">
+                <span>Mi Perfil</span>
+            </a>
+            <img src="img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito">
+        </div>
+    </header>
+
+    <main class="contacto-container">
+        <h1 style="text-align: center; color: var(--rojo-carmesi); margin-bottom: 10px;">Contacto</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 40px;">Estamos aquí para ayudarte. Comunícate con nosotros de cualquier manera</p>
+
+        <div class="contacto-grid">
+            <div class="contacto-info">
+                <h3>📍 Ubicaciones</h3>
+                <p><strong>San Salvador</strong><br>Centro Comercial Plaza Mayor<br>Calle Poniente #123</p>
+                <p><strong>Santa Tecla</strong><br>Centro Plaza Santa Tecla<br>Avenida Principal #456</p>
+                <p><strong>Soyapango</strong><br>Mall Soyapango<br>Calle Central #789</p>
+                <p><strong>Santa Ana</strong><br>Paseo Santa Ana<br>Boulevard Universitario #100</p>
+                <p><strong>San Miguel</strong><br>Centro Comercial San Miguel<br>Avenida Roosevelt #200</p>
+            </div>
+
+            <div class="contacto-info">
+                <h3>📞 Teléfono</h3>
+                <p><strong>Línea Principal:</strong><br><a href="tel:+50373881122">+503 7388-1122</a></p>
+                <p><strong>Soporte Cliente:</strong><br><a href="tel:+50373881122">+503 7388-1122</a></p>
+                <p><strong>WhatsApp:</strong><br><a href="https://wa.me/50373881122">+503 7388-1122</a></p>
+                
+                <h3 style="margin-top: 30px;">📧 Email</h3>
+                <p><a href="mailto:info@asianwok.com">info@asianwok.com</a></p>
+                <p><a href="mailto:pedidos@asianwok.com">pedidos@asianwok.com</a></p>
+
+                <h3 style="margin-top: 30px;">🕐 Horarios</h3>
+                <p>Lunes - Jueves: 10:00 a.m. - 9:00 p.m.<br>
+                Viernes - Sábado: 10:00 a.m. - 10:00 p.m.<br>
+                Domingo: 10:00 a.m. - 8:00 p.m.</p>
+            </div>
+        </div>
+
+        <div style="margin: 40px 0;">
+            <h2 style="color: var(--rojo-carmesi); text-align: center;">Envíanos un Mensaje</h2>
+            <form class="formulario-contacto" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+503 7388-1122">
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="¿En qué podemos ayudarte?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer-sitio">
+        <div class="columna-footer">
+            <h3>Horario de atención</h3>
+            <p>Lunes a Jueves: 10:00 a.m. – 9:00 p.m.</p>
+            <p>Viernes y Sábado: 10:00 a.m. – 10:00 p.m.</p>
+            <p>Domingo: 10:00 a.m. – 8:00 p.m.</p>
+        </div>
+        <div class="columna-footer">
+            <h3>Ubicaciones</h3>
+            <ul class="lista-ubicaciones">
+                <li>San Salvador</li>
+                <li>Santa Tecla</li>
+                <li>Soyapango</li>
+                <li>Santa Ana</li>
+                <li>San Miguel</li>
+            </ul>
+        </div>
+        <div class="columna-footer">
+            <h3>Redes Sociales</h3>
+            <ul class="lista-redes">
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://x.com" target="_blank">Twitter / X</a></li>
+            </ul>
+        </div>
+        <div class="footer-creditos">
+            <p>&copy; 2026 Asian Wok. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
