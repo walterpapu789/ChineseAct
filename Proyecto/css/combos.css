@@ -1,0 +1,12 @@
+@import url('style.css');
+
+/* Nav y variables (duplicado intencional para que cada página tenga su propio CSS) */
+.menu-navegacion ul { display: flex; list-style: none; gap: 35px; }
+.menu-navegacion ul li a { text-decoration: none; color: var(--negro-carbon); font-weight: 500; font-size: 16px; padding: 8px 0; position: relative; transition: var(--transicion-suave); }
+.menu-navegacion ul li a:hover { color: var(--rojo-carmesi); }
+.menu-navegacion ul li a::after { content: ''; position: absolute; width: 0; height: 3px; bottom: 0; left: 0; background-color: var(--rojo-carmesi); transition: var(--transicion-suave); }
+.menu-navegacion ul li a:hover::after { width: 100%; }
+
+/* Ajustes específicos de Combos */
+.seccion-catalogo { padding: 40px 5%; }
+.tarjeta-producto { min-height: 320px; }
