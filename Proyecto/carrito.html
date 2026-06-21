@@ -23,16 +23,17 @@
             </ul>
         </nav>
 
+        <!-- CORREGIDO: Se quitó el div duplicado que estaba aquí -->
         <div class="acciones-usuario">
-               <div class="acciones-usuario">
             <div id="contenedor-autenticacion" style="display: inline-block;">
                 <a href="perfil.html" class="enlace-login">
                     <img src="img/perfil.png" alt="Icono de usuario" class="icono-usuario">
                     <span>Walterpapu</span>
                 </a>
             </div>
+
             <a href="carrito.html" class="enlace-login">
-                <svg class="icono-carrito" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="icono-carrito" viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
                     <circle cx="10" cy="21" r="1"></circle>
                     <circle cx="20" cy="21" r="1"></circle>
                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
@@ -131,7 +132,7 @@
                 <button class="btn-checkout">Proceder al Pago</button>
                 <a href="menu.html" class="btn-continuar" style="display: block; text-align: center; margin-top: 12px;">Continuar comprando</a>
             </div>
-        </div>
+        </div> <!-- CORREGIDO: Se añadió este div para cerrar bien 'carrito-grid' -->
     </main>
 
     <!-- FOOTER -->
@@ -162,7 +163,7 @@
         <div class="columna-footer">
             <h3>Créditos</h3>
             <p>© 2024 Asian Wok. Todos los derechos reservados.</p>
-            <p>Hecho con  en El Salvador</p>
+            <p>Hecho con  en El Salvador</p> 
         </div>
     </footer>
 </body>
