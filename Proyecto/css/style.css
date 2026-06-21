@@ -37,6 +37,38 @@ body {
 .texto-rojo { color: var(--rojo-carmesi) !important; }
 .texto-negro { color: var(--negro-carbon) !important; }
 
+/* Reset global de enlaces - Remover color azul */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Estilos específicos para .enlace-tarjeta */
+.enlace-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--negro-carbon);
+    text-decoration: none;
+    transition: var(--transicion-suave);
+}
+
+.enlace-tarjeta:visited {
+    color: var(--negro-carbon);
+}
+
+.enlace-tarjeta:hover {
+    color: var(--rojo-carmesi);
+    text-decoration: none;
+}
+
 /* ==========================================================================
    3. CABECERA NAVEGABLE (Header, Menu & Acciones)
    ========================================================================== */

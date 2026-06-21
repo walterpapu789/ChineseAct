@@ -1,0 +1,261 @@
+/* ==========================================================================
+   1. VARIABLES DE MARCA E IDENTIDAD (:root)
+   ========================================================================== */
+:root {
+    --rojo-carmesi: #B40000;       /* Rojo institucional de botones y CTAs */
+    --rojo-hover: #8A0000;         /* Variante oscura para estados activos */
+    --negro-carbon: #111111;       /* Fondo del Footer y contraste */
+    --gris-borde: rgba(180, 0, 0, 0.15); /* Contorno sutil con matiz de marca */
+    --fuente-global: 'Arial', sans-serif;
+    --curva-animacion: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --transicion-suave: all 0.35s var(--curva-animacion);
+}
+
+/* ==========================================================================
+   2. RESETEO ESTRUCTURAL Y SOPORTE DE IMAGEN DE FONDO
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-global);
+    color: var(--negro-carbon);
+    line-height: 1.6;
+    
+    /* Carga de tu imagen local texturizada */
+    background-image: url('../img/tu-fondo-texturizado1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Clases de utilidad dinámicas para alterar color de fuentes */
+.texto-rojo { color: var(--rojo-carmesi) !important; }
+.texto-negro { color: var(--negro-carbon) !important; }
+
+/* Reset global de enlaces - Remover color azul */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Estilos específicos para .enlace-tarjeta */
+.enlace-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--negro-carbon);
+    text-decoration: none;
+    transition: var(--transicion-suave);
+}
+
+.enlace-tarjeta:visited {
+    color: var(--negro-carbon);
+}
+
+.enlace-tarjeta:hover {
+    color: var(--rojo-carmesi);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   3. CABECERA NAVEGABLE (Header, Menu & Acciones)
+   ========================================================================== */
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 2px solid var(--gris-borde);
+    backdrop-filter: blur(8px); /* Difuminado premium de fondo */
+}
+
+/* Control estricto del tamaño del Logo */
+.logo-marca {
+    height: 70px;       /* Altura corregida para que luzca imponente */
+    width: auto;
+    cursor: pointer;
+    transition: var(--transicion-suave);
+}
+
+.logo-marca:hover {
+    transform: scale(1.05) rotate(-2deg);
+    filter: drop-shadow(0 4px 8px rgba(180, 0, 0, 0.2));
+}
+
+/* Enlaces del menú de navegación */
+.menu-navegacion ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu-navegacion ul li a {
+    text-decoration: none;
+    color: var(--negro-carbon);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 0;
+    position: relative;
+    transition: var(--transicion-suave);
+}
+
+.menu-navegacion ul li a:hover {
+    color: var(--rojo-carmesi);
+}
+
+/* Animación de barra inferior expansiva */
+.menu-navegacion ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rojo-carmesi);
+    transition: var(--transicion-suave);
+}
+
+.menu-navegacion ul li a:hover::after {
+    width: 100%;
+}
+
+/* Bloque derecho: Login y Carrito local */
+.acciones-usuario {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.enlace-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--negro-carbon);
+    font-weight: 500;
+    transition: var(--transicion-suave);
+}
+
+/* Dimensionamiento exacto de iconos locales en Header */
+.icono-usuario, 
+.icono-carrito {
+    height: 26px;
+    width: auto;
+    transition: var(--transicion-suave);
+}
+
+.icono-carrito {
+    cursor: pointer;
+}
+
+/* Animaciones individuales de enfoque (Hover) */
+.enlace-login:hover {
+    color: var(--rojo-carmesi);
+}
+
+.enlace-login:hover .icono-usuario {
+    transform: translateY(-3px);
+}
+
+.icono-carrito:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.contacto-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+        .contacto-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .contacto-info h3 {
+            color: var(--rojo-carmesi);
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        .contacto-info p {
+            margin: 15px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+        .contacto-info a {
+            color: var(--rojo-carmesi);
+            text-decoration: none;
+        }
+        .contacto-info a:hover {
+            text-decoration: underline;
+        }
+        .formulario-contacto {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--negro-carbon);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--rojo-carmesi);
+            box-shadow: 0 0 0 3px rgba(180, 0, 0, 0.1);
+        }
+        .btn-enviar {
+            background-color: var(--rojo-carmesi);
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1em;
+        }
+        .btn-enviar:hover {
+            background-color: var(--rojo-hover);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
