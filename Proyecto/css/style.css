@@ -181,7 +181,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    padding: 40px 10% 10px 10%; /* REDUCIDO: Bajamos el padding de abajo a 10px */
+    padding: 40px 10% 10px 10%; /* REDUCIDO: le baje al  padding de abajo a 10px porque si no no me da */
     background-color: transparent; 
     margin: 20px auto 0 auto;    /* REDUCIDO: El margen inferior ahora es 0 */
     max-width: 1400px;
