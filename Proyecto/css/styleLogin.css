@@ -1,12 +1,10 @@
-/* ==========================================================================
-   1. VARIABLES DE MARCA E IDENTIDAD (:root)
-   ========================================================================== */
+
 :root {
-    --rojo-carmesi: #B40000;       /* Rojo institucional de botones y CTAs */
-    --rojo-hover: #8A0000;         /* Variante oscura para estados activos */
-    --negro-carbon: #111111;       /* Contraste principal */
-    --gris-borde: rgba(180, 0, 0, 0.15); /* Contorno sutil con matiz de marca */
-    --gris-suave: #F5F5F5;         /* Fondo para los campos de texto internos */
+    --rojo-carmesi: #B40000;       
+    --rojo-hover: #8A0000;         
+    --negro-carbon: #111111;       
+    --gris-borde: rgba(180, 0, 0, 0.15); 
+    --gris-suave: #F5F5F5;         
     --fuente-global: 'Arial', sans-serif;
     --curva-animacion: cubic-bezier(0.2, 0.8, 0.2, 1);
     --transicion-suave: all 0.35s var(--curva-animacion);
@@ -135,7 +133,7 @@ body {
    4. CONTENEDOR CENTRAL Y TARJETA FLOTANTE (.caja-formulario)
    ========================================================================== */
 .contenedor-formulario {
-    flex: 1;
+    flex: 1;   /*este we se estira*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,12 +143,12 @@ body {
 .caja-formulario {
     background-color: rgba(255, 255, 255, 0.98);
     border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 24px; /* Esquinas curvas premium estilo Figma */
+    border-radius: 24px; 
     padding: 45px 35px;
     width: 100%;
-    max-width: 480px; /* Ancho ergonómico óptimo */
+    max-width: 480px; 
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Sombra proyectada profunda */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); 
     transition: transform 0.4s var(--curva-animacion);
 }
 
@@ -178,7 +176,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: left; /* Alineación natural para lectura de labels */
+    text-align: left; 
 }
 
 .caja-formulario form div {
@@ -213,9 +211,7 @@ body {
     box-shadow: 0 0 0 4px rgba(180, 0, 0, 0.1);
 }
 
-/* ==========================================================================
-   6. BOTÓN DE ACCIÓN DOMINANTE (CTA)
-   ========================================================================== */
+
 .caja-formulario button[type="submit"] {
     width: 100%;
     height: 52px;
@@ -243,10 +239,8 @@ body {
     transform: translateY(0);
 }
 
-/* ==========================================================================
-   7. ENLACES SECUNDARIOS DE RETROALIMENTACIÓN
-   ========================================================================== */
-.caja-formulario p:last-of-type,
+
+.caja-formulario p:last-of-type,   /* son como condicionales we*/
 .caja-formulario p:nth-last-of-type(2) {
     margin-top: 15px;
     margin-bottom: 0;
@@ -261,7 +255,7 @@ body {
     transition: var(--transicion-suave);
 }
 
-.caja-formulario a:hover {
+.caja-formulario a:hover { 
     color: var(--rojo-hover);
     text-decoration: underline;
 }

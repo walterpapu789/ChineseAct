@@ -1,11 +1,8 @@
-/* ==========================================================================
-   1. VARIABLES DE MARCA E IDENTIDAD (:root)
-   ========================================================================== */
 :root {
-    --rojo-carmesi: #B40000;       /* Rojo institucional de botones y CTAs */
+    --rojo-carmesi: #B40000;       /* Rojo institucional de botones we*/
     --rojo-hover: #8A0000;         /* Variante oscura para estados activos */
-    --negro-carbon: #111111;       /* Fondo del Footer y contraste */
-    --gris-borde: rgba(180, 0, 0, 0.15); /* Contorno sutil con matiz de marca */
+    --negro-carbon: #111111;       
+    --gris-borde: rgba(180, 0, 0, 0.15); 
     --fuente-global: 'Arial', sans-serif;
     --curva-animacion: cubic-bezier(0.2, 0.8, 0.2, 1);
     --transicion-suave: all 0.35s var(--curva-animacion);
@@ -82,9 +79,9 @@ a:hover {
     backdrop-filter: blur(8px); /* Difuminado premium de fondo */
 }
 
-/* Control estricto del tamaño del Logo */
+/* Control estricto del tamaño del Logo xdd */
 .logo-marca {
-    height: 70px;       /* Altura corregida para que luzca imponente */
+    height: 70px;       /* Altura corregida para que luzca imponente,aqui fue porque el logo me daba pelea */
     width: auto;
     cursor: pointer;
     transition: var(--transicion-suave);
@@ -428,6 +425,10 @@ a:hover {
     color: rgba(255, 255, 255, 0.5);
 }
 
+
+/*
+CODIGO APAAARTEEEE
+*/
 
 /*sobre nosotros pa no perderme */
     .seccion-nosotros {
