@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1512;
+    color: #e6dfd9;
+}
+
+.contenedor-principal {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: #110e0c;
+    border-bottom: 1px solid #2a221d;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #d4af37;
+}
+
+header nav a {
+    color: #e6dfd9;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 950px;
+    background-color: #221b17;
+    border: 1px solid #332923;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.imagen-cafe {
+    background-image: url('https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600');
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    width: 100%;
+    filter: brightness(0.9);
+}
+
+.texto-cafe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+    text-align: center;
+    gap: 20px;
+}
+
+.texto-cafe h2 {
+    color: #f5efe9;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.texto-cafe p {
+    color: #b3a79e;
+    line-height: 1.6;
+    max-width: 450px;
+    font-size: 0.95rem;
+}
+
+.texto-cafe button {
+    background-color: #d4af37;
+    color: #110e0c;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.texto-cafe button:hover {
+    background-color: #f3cd57;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: #110e0c;
+    color: #66574d;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    border-top: 1px solid #2a221d;
+}
+
+@media (min-width: 768px) {
+    .info-producto {
+        flex-direction: row;
+    }
+
+    .imagen-cafe {
+        width: 50%;
+        height: 480px;
+    }
+
+    .texto-cafe {
+        width: 50%;
+        padding: 50px;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
