@@ -5,134 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asian Wok - El auténtico sabor del Wok</title>
     <meta name="description" content="web de comida rapida de la empresa de asian wok">
-
-    <link rel="stylesheet" href="css/style.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased min-h-screen">
 
-    <header class="header-principal">
-        <div class="contenedor-logo">
-            <img src="../img/logo (2).png" alt="Logo de Asian Wok" class="logo-marca">
-        </div>
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-100 transition-all">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 md:px-12">
+            
+            <div class="flex items-center">
+                <img src="../img/logo (2).png" alt="Logo de Asian Wok" class="h-12 w-auto object-contain">
+            </div>
 
-        <nav class="menu-navegacion">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="menu.html">Menú</a></li>
-                <li><a href="promociones.html">Promociones</a></li>
-                <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8 text-gray-600 font-medium tracking-wide">
+                    <li><a href="index.html" class="hover:text-red-600 transition">Inicio</a></li>
+                    <li><a href="menu.html" class="hover:text-red-600 transition">Menú</a></li>
+                    <li><a href="promociones.html" class="hover:text-red-600 transition">Promociones</a></li>
+                    <li><a href="nosotros.html" class="hover:text-red-600 transition">Sobre Nosotros</a></li>
+                    <li><a href="contacto.html" class="hover:text-red-600 transition">Contacto</a></li>
+                </ul>
+            </nav>
 
-        <div class="acciones-usuario">
-            <div id="contenedor-autenticacion" style="display: inline-block;">
-                <a href="login.html" class="enlace-login">
-                    <img src="../img/inicioSesion.png" alt="Icono de usuario" class="icono-usuario">
+            <div class="flex items-center space-x-6">
+                <a href="login.html" class="flex items-center space-x-2 text-gray-700 hover:text-red-600 font-medium transition text-sm">
+                    <img src="../img/inicioSesion.png" alt="Icono de usuario" class="h-5 w-5 object-contain">
                     <span>Iniciar sesión</span>
                 </a>
+                <a href="registro.html" class="text-gray-700 hover:text-red-600 font-medium transition text-sm">
+                    <span>Crear cuenta</span>
+                </a>
+                <div class="relative cursor-pointer group">
+                    <img src="../img/carritoCompras (2).png" alt="Carrito de compras" class="h-6 w-6 object-contain group-hover:scale-105 transition-transform">
+                </div>
             </div>
-            <img src="../img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito">
+            
         </div>
     </header>
 
-    <main>
-      <section id="inicio" class="seccion-hero">
-            <div class="contenido-hero">
-                <h1>El auténtico sabor del Wok llevado a tu mesa</h1>
-                <p>Descubre nuestros platillos únicos preparados con ingredientes frescos. Combo Red Dragon por $7.95.</p>
+    <main class="max-w-7xl mx-auto px-6 md:px-12 py-12 space-y-20">
+
+        <section id="inicio" class="flex flex-col md:flex-row items-center justify-between gap-12 pt-6">
+            <div class="flex flex-col space-y-6 md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-red-700 leading-tight">
+                    El auténtico sabor del Wok llevado a tu mesa
+                </h1>
+                <p class="text-lg text-gray-600 max-w-lg leading-relaxed">
+                    Descubre nuestros platillos únicos preparados con ingredientes frescos. Combo Red Dragon por <span class="font-bold text-gray-900">$7.95</span>.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
+                    <button type="button" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-xl shadow-md transition transform hover:-translate-y-0.5 cursor-pointer">
+                        Explorar Menú
+                    </button>
+                </div>
             </div>
-            <div id="imagen-cocina" class="contenedor-hero-img">
-                <img src="../img/cocina.png" alt="Platillo de Wok humeante en cocina" class="img-hero-principal">
+            <div id="imagen-cocina" class="md:w-1/2 flex justify-center">
+                <img src="../img/cocina.png" alt="Platillo de Wok humeante en cocina" class="justify-center w-auto h-auto rounded-2xl">
             </div>
         </section>
-        <section id="menu" class="seccion-catalogo">
-            <h2>Categorías de menú</h2>
+
+        <section id="menu" class="space-y-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Categorías de menú</h2>
+                <div class="h-1 w-16 bg-red-600 mx-auto mt-3 rounded-full"></div>
+            </div>
             
-            <div class="grupo-categoria">
-                <h3>Nuestras Comidas</h3>
-                <div class="grid-tarjetas">
-                    <article class="tarjeta-producto">
-                        <img src="../img/combos.png" alt="Combos personales y familiares" class="img-tarjeta">
-                        <h4>Combos</h4>
+            <div class="space-y-6">
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-red-700 inline-block relative pb-1">
+                        Nuestras Comidas
+                    </h3>
+                    <div class="w-8 h-0.5 bg-red-600 mx-auto mt-1"></div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/combos.png" alt="Combos personales y familiares" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Combos</h4>
                     </article>
 
-                    <article class="tarjeta-producto">
-                        <img src="../img/arroz.png" alt="Variedad de arroces fritos al wok" class="img-tarjeta">
-                        <h4>Arroces</h4>
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/arroz.png" alt="Variedad de arroces fritos al wok" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Arroces</h4>
                     </article>
 
-                    <article class="tarjeta-producto">
-                        <img src="../img/entradas.png" alt="Entradas crujientes y rollos de primavera" class="img-tarjeta">
-                        <h4>Entradas</h4>
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/entradas.png" alt="Entradas crujientes y rollos de primavera" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Entradas</h4>
                     </article>
 
-                    <article class="tarjeta-producto">
-                        <img src="../img/banquete.png" alt="Opciones de banquetes para grupos" class="img-tarjeta">
-                        <h4>Banquetes</h4>
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/banquete.png" alt="Opciones de banquetes para grupos" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Banquetes</h4>
                     </article>
                 </div>
             </div>
 
-            <div class="grupo-categoria">
-                <h3>Bebidas y Complementos</h3>
-                <div class="grid-tarjetas">
-                    <article class="tarjeta-producto">
-                        <img src="../img/bebdias.png" alt="Bebidas frías y refrescos" class="img-tarjeta">
-                        <h4>Bebidas</h4>
+            <div class="space-y-6 pt-6">
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-red-700 inline-block relative pb-1">
+                        Bebidas y Complementos
+                    </h3>
+                    <div class="w-8 h-0.5 bg-red-600 mx-auto mt-1"></div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/bebdias.png" alt="Bebidas frías y refrescos" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Bebidas</h4>
                     </article>
 
-                    <article class="tarjeta-producto">
-                        <img src="../img/promociones.png" alt="Cupones y promociones del mes" class="img-tarjeta">
-                        <h4>Promociones</h4>
-                     </article>
-                    
-                    <article class="tarjeta-producto">
-                        <img src="../img/postre.png" alt="Postres" class="img-tarjeta">
-                        <h4>Postres</h4>
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/promociones.png" alt="Cupones y promociones del mes" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Promociones</h4>
                     </article>
 
-                    <article class="tarjeta-producto">
-                        <img src="../img/dragon.png" alt="Ofertas Dragón especiales" class="img-tarjeta">
-                        <h4>Ofertas Dragón</h4>
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/postre.png" alt="Postres" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Postres</h4>
+                    </article>
+
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col items-center text-center justify-between hover:shadow-md transition group">
+                        <div class="overflow-hidden rounded-xl mb-4">
+                            <img src="../img/dragon.png" alt="Ofertas Dragón especiales" class="h-32 w-32 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <h4 class="font-bold text-gray-900 tracking-wide text-base">Ofertas Dragón</h4>
                     </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer-sitio">
-        <div class="columna-footer">
-            <h3>Horario de atención</h3>
-            <p>Lunes a Jueves: 10:00 a.m. – 9:00 p.m.</p>
-            <p>Viernes y Sábado: 10:00 a.m. – 10:00 p.m.</p>
-            <p>Domingo: 10:00 a.m. – 8:00 p.m.</p>
+    <footer class="bg-neutral-900 text-neutral-400 pt-16 pb-8 px-6 md:px-12 border-t border-neutral-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-neutral-800">
+            
+            <div class="space-y-4">
+                <h3 class="text-white font-bold text-lg tracking-wide">Horario de atención</h3>
+                <div class="space-y-2 text-sm leading-relaxed">
+                    <p><span class="font-semibold text-neutral-300">Lunes a Jueves:</span> 10:00 a.m. – 9:00 p.m.</p>
+                    <p><span class="font-semibold text-neutral-300">Viernes y Sábado:</span> 10:00 a.m. – 10:00 p.m.</p>
+                    <p><span class="font-semibold text-neutral-300">Domingo:</span> 10:00 a.m. – 8:00 p.m.</p>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-white font-bold text-lg tracking-wide">Ubicaciones</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="hover:text-white transition cursor-default">San Salvador</li>
+                    <li class="hover:text-white transition cursor-default">Santa Tecla</li>
+                    <li class="hover:text-white transition cursor-default">Soyapango</li>
+                    <li class="hover:text-white transition cursor-default">Santa Ana</li>
+                    <li class="hover:text-white transition cursor-default">San Miguel</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h3 class="text-white font-bold text-lg tracking-wide">Redes Sociales</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://facebook.com" target="_blank" class="hover:text-white transition">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank" class="hover:text-white transition">Instagram</a></li>
+                    <li><a href="https://x.com" target="_blank" class="hover:text-white transition">Twitter / X</a></li>
+                </ul>
+            </div>
+            
         </div>
 
-        <div class="columna-footer">
-            <h3>Ubicaciones</h3>
-            <ul class="lista-ubicaciones">
-                <li>San Salvador</li>
-                <li>Santa Tecla</li>
-                <li>Soyapango</li>
-                <li>Santa Ana</li>
-                <li>San Miguel</li>
-            </ul>
-        </div>
-
-        <div class="columna-footer">
-            <h3>Redes Sociales</h3>
-            <ul class="lista-redes">
-                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-                <li><a href="https://x.com" target="_blank">Twitter / X</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-creditos">
+        <div class="max-w-7xl mx-auto pt-6 text-center text-xs text-neutral-600">
             <p>&copy; 2026 Asian Wok. Todos los derechos reservados.</p>
         </div>
     </footer>
+
 </body>
 </html>
