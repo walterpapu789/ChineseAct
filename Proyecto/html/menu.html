@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Asian Wok</title>
-     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="body-texturizado antialiased">
    
-    <header class="header-principal">
-        <a href="index-logged.html" style="display: flex; align-items: center;">
+    <header class="header-principal flex justify-between items-center py-5 px-[5%] sticky top-0 z-50">
+        <a href="index-logged.html" class="flex items-center">
             <img src="../img/logo.png" alt="Asian Wok Logo" class="logo-marca">
         </a>
 
-        <nav class="menu-navegacion">
-            <ul>
+        <nav class="menu-navegacion hidden md:block">
+            <ul class="flex gap-[35px]">
                 <li><a href="index-logged.html">Inicio</a></li>
                 <li><a href="menu.html">Menú</a></li>
                 <li><a href="promociones.html">Promociones</a></li>
@@ -23,348 +25,108 @@
             </ul>
         </nav>
 
-      <div class="acciones-usuario">
-            <div id="contenedor-autenticacion" style="display: inline-block;">
-                <a href="perfil.html" class="enlace-login">
+        <div class="acciones-usuario flex items-center gap-[25px]">
+            <div id="contenedor-autenticacion" class="inline-block">
+                <a href="perfil.html" class="enlace-login group">
                     <img src="../img/perfil.png" alt="Icono de usuario" class="icono-usuario">
                     <span>Walterpapu</span>
                 </a>
             </div>
-            <a href="carrito.html"><img src="../img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito"></a>
+            <a href="carrito.html">
+                <img src="../img/carritoCompras (2).png" alt="Carrito de compras" class="icono-carrito">
+            </a>
         </div>
     </header>
 
-   
-    <main class="menu-contenedor">
-        <h1 class="menu-titulo">Nuestro Menú</h1>
-        <p class="menu-subtitulo">Descubre nuestras deliciosas opciones de comida asiática auténtica</p>
+    <main class="max-w-[1400px] my-10 mx-auto py-5 px-[5%]">
+        <h1 class="menu-titulo text-center">Nuestro Menú</h1>
+        <p class="menu-subtitulo text-center mb-10">Descubre nuestras deliciosas opciones de comida asiática auténtica</p>
 
-       
-        <div class="menu-categoria">
-            <h2 class="categoria-titulo"> Combos</h2>
-            <div class="categoria-grid">
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
+        <div class="mb-[60px]">
+            <h2 class="categoria-titulo">Combos</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+                
+                <div class="tarjeta-producto group">
+                    <div class="menu-item-imagen-base relative w-full h-[200px] flex items-center justify-center rounded-xl overflow-hidden">
                         <span>Imagen Combo</span>
                         <span class="badge-especial">Popular</span>
                     </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Combo Familiar</h3>
-                        <p class="menu-item-descripcion">Incluye arroz, 3 proteínas, bebida y postre para 4 personas</p>
-                        <div class="menu-item-footer">
+                    <div class="pt-5 flex flex-col flex-grow justify-between gap-4 w-full">
+                        <div>
+                            <h3 class="menu-item-nombre transition-colors duration-350">Combo Familiar</h3>
+                            <p class="menu-item-descripcion mt-2">Incluye arroz, 3 proteínas, bebida y postre para 4 personas</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
                             <span class="menu-item-precio">$19.99</span>
                             <button class="btn-agregar">Agregar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
+                <div class="tarjeta-producto group">
+                    <div class="menu-item-imagen-base relative w-full h-[200px] flex items-center justify-center rounded-xl overflow-hidden">
                         <span>Imagen Combo</span>
                         <span class="badge-especial">Favorito</span>
                     </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Combo Pareja</h3>
-                        <p class="menu-item-descripcion">Ideal para dos personas con variedad de sabores</p>
-                        <div class="menu-item-footer">
+                    <div class="pt-5 flex flex-col flex-grow justify-between gap-4 w-full">
+                        <div>
+                            <h3 class="menu-item-nombre transition-colors duration-350">Combo Pareja</h3>
+                            <p class="menu-item-descripcion mt-2">Ideal para dos personas con variedad de sabores</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
                             <span class="menu-item-precio">$14.99</span>
                             <button class="btn-agregar">Agregar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
+                <div class="tarjeta-producto group">
+                    <div class="menu-item-imagen-base relative w-full h-[200px] flex items-center justify-center rounded-xl overflow-hidden">
                         <span>Imagen Combo</span>
                     </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Combo Individual</h3>
-                        <p class="menu-item-descripcion">Para una persona con proteína, arroz y bebida</p>
-                        <div class="menu-item-footer">
+                    <div class="pt-5 flex flex-col flex-grow justify-between gap-4 w-full">
+                        <div>
+                            <h3 class="menu-item-nombre transition-colors duration-350">Combo Individual</h3>
+                            <p class="menu-item-descripcion mt-2">Para una persona con proteína, arroz y bebida</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
                             <span class="menu-item-precio">$8.99</span>
                             <button class="btn-agregar">Agregar</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
+                <div class="tarjeta-producto group">
+                    <div class="menu-item-imagen-base relative w-full h-[200px] flex items-center justify-center rounded-xl overflow-hidden">
                         <span>Imagen Combo</span>
                         <span class="badge-especial">Deluxe</span>
                     </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Combo Dragón Premium</h3>
-                        <p class="menu-item-descripcion">Nuestro combo más completo con 5 proteínas seleccionadas</p>
-                        <div class="menu-item-footer">
+                    <div class="pt-5 flex flex-col flex-grow justify-between gap-4 w-full">
+                        <div>
+                            <h3 class="menu-item-nombre transition-colors duration-350">Combo Dragón Premium</h3>
+                            <p class="menu-item-descripcion mt-2">Nuestro combo más completo con 5 proteínas seleccionadas</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-auto">
                             <span class="menu-item-precio">$24.99</span>
                             <button class="btn-agregar">Agregar</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- ARROCES -->
-        <div class="menu-categoria">
-            <h2 class="categoria-titulo"> Arroces Fritos</h2>
-            <div class="categoria-grid">
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Arroz</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Arroz Especial</h3>
-                        <p class="menu-item-descripcion">Frito con camarones, pollo, huevo y verduras</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$7.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Arroz</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Arroz Chaulafán</h3>
-                        <p class="menu-item-descripcion">Con tallarín, pollo, camarones y salsa de soya</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$7.49</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Arroz</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Arroz Blanco</h3>
-                        <p class="menu-item-descripcion">Arroz frito preparado con salsa de soya</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$3.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Arroz</span>
-                        <span class="badge-especial">Premium</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Arroz con Camarones</h3>
-                        <p class="menu-item-descripcion">Camarones jumbo frescos con arroz frito fino</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$9.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="menu-categoria">
-            <h2 class="categoria-titulo"> Entradas y Aperitivos</h2>
-            <div class="categoria-grid">
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Entrada</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Rollos de Primavera</h3>
-                        <p class="menu-item-descripcion">4 rollos crujientes rellenos de verduras frescas</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$4.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Entrada</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Empanaditas</h3>
-                        <p class="menu-item-descripcion">6 empanaditas rellenas de pollo y verduras</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$3.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Entrada</span>
-                        <span class="badge-especial">Delicioso</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Camarones Apanados</h3>
-                        <p class="menu-item-descripcion">Camarones frescos empanizados y crujientes</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$6.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Entrada</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Tabla Variada</h3>
-                        <p class="menu-item-descripcion">Selección de rollos, empanaditas y camarones</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$12.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="menu-categoria">
-            <h2 class="categoria-titulo">Bebidas</h2>
-            <div class="categoria-grid">
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Bebida</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Té Verde</h3>
-                        <p class="menu-item-descripcion">Té verde caliente o helado, refrescante y saludable</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$2.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Bebida</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Limonada Fresca</h3>
-                        <p class="menu-item-descripcion">Limonada casera con hielo y menta fresca</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$1.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Bebida</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Refrescos</h3>
-                        <p class="menu-item-descripcion">Coca Cola, Sprite, Fanta - Elige tu favorita</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$2.50</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Bebida</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Agua Embotellada</h3>
-                        <p class="menu-item-descripcion">Agua purificada fría con hielo</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$1.50</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="menu-categoria">
-            <h2 class="categoria-titulo"> Postres</h2>
-            <div class="categoria-grid">
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Postre</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Bolas Dulces</h3>
-                        <p class="menu-item-descripcion">Deliciosas bolitas de postre con almíbar dulce</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$3.50</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Postre</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Flan Casero</h3>
-                        <p class="menu-item-descripcion">Flan cremoso hecho en casa con caramelo</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$3.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Postre</span>
-                        <span class="badge-especial">Favorito</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Helado Lychee</h3>
-                        <p class="menu-item-descripcion">Helado exótico de lychee, suave y refrescante</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$4.50</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-imagen">
-                        <span>Imagen Postre</span>
-                    </div>
-                    <div class="menu-item-contenido">
-                        <h3 class="menu-item-nombre">Galletas de la Fortuna</h3>
-                        <p class="menu-item-descripcion">Tradicionales galletas crujientes con mensaje sorpresa</p>
-                        <div class="menu-item-footer">
-                            <span class="menu-item-precio">$2.99</span>
-                            <button class="btn-agregar">Agregar</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </main>
 
-    
-    <footer class="footer-sitio">
-        <div class="columna-footer">
+    <footer class="footer-sitio flex flex-col md:flex-row justify-between flex-wrap gap-10">
+        <div class="flex-1 min-w-[220px]">
             <h3>Horarios</h3>
             <p>Lunes a Viernes: 11:00 AM - 11:00 PM</p>
             <p>Sábado: 12:00 PM - 12:00 AM</p>
             <p>Domingo: 12:00 PM - 10:00 PM</p>
         </div>
 
-        <div class="columna-footer">
+        <div class="flex-1 min-w-[220px]">
             <h3>Ubicaciones</h3>
             <p>Centro: Calle 1, San Salvador</p>
             <p>Santa Tecla: Avenida Principal, Santa Tecla</p>
@@ -372,7 +134,7 @@
             <p>Soyapango: Centro Comercial, Soyapango</p>
         </div>
 
-        <div class="columna-footer">
+        <div class="flex-1 min-w-[220px]">
             <h3>Redes Sociales</h3>
             <p><strong>Facebook:</strong> AsianWokSV</p>
             <p><strong>Instagram:</strong> @AsianWokSV</p>
@@ -380,10 +142,10 @@
             <p><strong>Teléfono:</strong> +503 2226-5678</p>
         </div>
 
-        <div class="columna-footer">
+        <div class="flex-1 min-w-[220px]">
             <h3>Créditos</h3>
             <p>© 2024 Asian Wok. Todos los derechos reservados.</p>
-            <p>Hecho con  en El Salvador</p>
+            <p>Hecho con ❤️ en El Salvador</p>
         </div>
     </footer>
 </body>
